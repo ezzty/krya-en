@@ -45,13 +45,11 @@ body {
 a {
   color: #242424;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  transition: border-color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 a:hover, a:active {
   color: #000;
-  border-bottom-color: rgba(0, 0, 0, 0.4);
 }
 
 /* 作者链接颜色与"作者"文字一致 */
@@ -309,7 +307,7 @@ textarea {
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 
 /* -----------------------------------------------------
@@ -332,13 +330,11 @@ html[data-theme="dark"] .logo-image {
 
 html[data-theme="dark"] a {
   color: rgba(255, 255, 255, 0.95);
-  border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
 html[data-theme="dark"] a:hover,
 html[data-theme="dark"] a:active {
   color: #fff;
-  border-bottom-color: rgba(255, 255, 255, 0.4);
 }
 
 html[data-theme="dark"] pre code {
