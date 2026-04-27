@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
-import { formatDate, truncateExcerpt, getPageNumbers } from '../lib/utils';
+import { formatDate, getPageNumbers } from '../lib/utils';
 
 interface Post {
   title: string;
@@ -60,7 +60,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           <li>{post.wordCount} words</li>
         </ul>
         <div class="col-9 post-content">
-          {truncateExcerpt(post.excerpt)}...
+          {post.excerpt}...
         </div>
       </article>
     ))}

@@ -27,12 +27,6 @@ export function formatDate(date: string | Date): string {
   return d.toISOString().split('T')[0];
 }
 
-// 截取摘要（减少 4 个字符）
-export function truncateExcerpt(excerpt: string, length: number = 116): string {
-  if (!excerpt) return '';
-  return excerpt.slice(0, length);
-}
-
 // 生成页码列表（最多显示 3 个页码）
 export function getPageNumbers(current: number, total: number): number[] {
   if (total <= 3) {
