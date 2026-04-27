@@ -1,0 +1,17 @@
+{
+  "name": "sintu-astro-theme",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Sintu theme for Astro - 单栏自适应博客主题",
+  "author": "Jin",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/post-build-image-processor.js",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "astro": "^6.1.8",
+    "marked": "^18.0.2"
+  }
+}

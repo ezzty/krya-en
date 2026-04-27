@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+backup/
+*.bak
+*.tar.gz
+
+# Environment
+.env
+.env.local
+
+# Astro
+.astro/
+
+# Obsidian
+.obsidian/
+.trash/
+src/content/posts/.obsidian/

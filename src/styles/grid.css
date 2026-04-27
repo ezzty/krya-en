@@ -1,0 +1,40 @@
+/* =====================================================
+   Sintu Theme - Grid System (精简版)
+   Updated: 2026-04-14
+   ===================================================== */
+
+/* 基础网格容器 */
+.colgroup {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.colgroup [class*="col-"] {
+  float: left;
+  min-height: 1px;
+  box-sizing: border-box;
+}
+
+/* 移动端 (默认) */
+.col-mb-12 {
+  width: 100%;
+}
+
+/* 桌面端 (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 738px;
+  }
+  
+  .col-3 {
+    width: 140px;
+    float: left;
+  }
+  
+  .col-9 {
+    width: calc(100% - 165px);
+    float: left;
+  }
+}

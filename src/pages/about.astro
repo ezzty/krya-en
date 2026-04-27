@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import Twikoo from '../components/Twikoo.astro';
+---
+
+<BaseLayout title="About - krya">
+  <NavBar slot="header" />
+  
+  <div class="col-mb-12" id="main" role="main">
+    <article class="post">
+      <h1 class="post-title">About Me</h1>
+      <div class="post-content">
+		 
+		<p>I’m a freelancer based in <a href="https://en.wikipedia.org/wiki/Chengdu">Chengdu</a>🐼, and I make my living online. I actively experiment with new technologies and enjoy exploring novel perspectives. I maintain this blog to record and share my thoughts.</p>
+
+		<p>I’ve been blogging since 2008, moving through Baidu Kongjian, Netease Blog, WordPress, and Blogger. In 2014, I switched to Typecho, and in 2026, I officially transitioned to a static site using the Astro framework. I designed the template myself, while my Hermes Agent handled the frontend functional code. The deployment is hosted on a free platform.</p>
+
+		<p>My articles are stored on a small Linux host at home, which I access as a virtual drive on my Windows machine. I use Obsidian on Windows to edit my posts and then have Hermes push them to GitHub. Sometimes, to save time, I send the full text to Hermes and let it handle the GitHub push directly.</p>
+        
+		<h2>Contact:</h2>
+        <p>Email: <a href="mailto:hi@krya.com">hi@krya.com</a> </p>
+		<p>Twitter: <a href="https://x.com/uniifi">jin</a></p>
+        
+        <h2>License</h2>
+        <p>Unless otherwise noted, all content on this site is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>).</p>
+      </div>
+    </article>
+    
+    <Twikoo />
+  </div>
+</BaseLayout>

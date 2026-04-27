@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NavBar from '../../components/NavBar.astro';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts')).filter(post => !post.data.draft);
+  
+  const categorySet = new Set<string>();
+  posts.forEach(post => {
+    const categories = post.data.categories || [];
+    categories.forEach(category => categorySet.add(category));
+  });
+  
+  return Array.from(categorySet).map(category => ({
+    params: { category },
+    props: { category }
+  }));
+}
+
+const allPosts = (await getCollection('posts')).filter(post => !post.data.draft);
+const { category } = Astro.params;
+const decodedCategory = decodeURIComponent(category!);
+
+const posts = allPosts
+  .filter(post => {
+    const categories = post.data.categories || [];
+    return categories.includes(decodedCategory);
+  })
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title={`Category: ${decodedCategory} | krya`}>
+  <NavBar slot="header" />
+  <div class="container">
+    <div class="col-mb-12">
+      <h1 class="categories-title">Category: {decodedCategory}</h1>
+      {posts.length > 0 ? (
+        <div class="post-list">
+          {posts.map(post => (
+            <article class="post-item">
+              <h2 class="post-title-small">
+                <a href={`/post/${post.id.replace(/\.[^.]+$/, '')}`}>{post.data.title}</a>
+              </h2>
+              <div class="post-meta">
+                <span>{new Date(post.data.pubDate).toISOString().split('T')[0]}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <p class="no-items">No articles in this category</p>
+      )}
+    </div>
+  </div>
+</BaseLayout>

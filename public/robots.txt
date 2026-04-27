@@ -1,0 +1,10 @@
+# robots.txt for krya (krya.com)
+
+User-agent: *
+Allow: /
+
+# 站点地图
+Sitemap: https://krya.com/sitemap.xml
+
+# 允许所有搜索引擎抓取
+# 不禁止任何目录

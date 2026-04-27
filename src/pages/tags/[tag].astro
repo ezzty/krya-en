@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NavBar from '../../components/NavBar.astro';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts')).filter(post => !post.data.draft);
+  
+  const tagSet = new Set<string>();
+  posts.forEach(post => {
+    const tags = post.data.tags || [];
+    tags.forEach(tag => tagSet.add(tag));
+  });
+  
+  return Array.from(tagSet).map(tag => ({
+    params: { tag },
+    props: { tag }
+  }));
+}
+
+const allPosts = (await getCollection('posts')).filter(post => !post.data.draft);
+const { tag } = Astro.params;
+const decodedTag = decodeURIComponent(tag!);
+
+const posts = allPosts
+  .filter(post => {
+    const tags = post.data.tags || [];
+    return tags.includes(decodedTag);
+  })
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title={`Tag: ${decodedTag} | krya`}>
+  <NavBar slot="header" />
+  <div class="container">
+    <div class="col-mb-12">
+      <h1 class="tags-title">Tag: {decodedTag}</h1>
+      {posts.length > 0 ? (
+        <div class="post-list">
+          {posts.map(post => (
+            <article class="post-item">
+              <h2 class="post-title-small">
+                <a href={`/post/${post.id.replace(/\.[^.]+$/, '')}`}>{post.data.title}</a>
+              </h2>
+              <div class="post-meta">
+                <span>{new Date(post.data.pubDate).toISOString().split('T')[0]}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <p class="no-items">No articles with this tag</p>
+      )}
+    </div>
+  </div>
+</BaseLayout>

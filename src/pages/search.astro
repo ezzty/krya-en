@@ -1,0 +1,250 @@
+---
+import NavBar from '../components/NavBar.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<style>
+  .search-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .search-box {
+    margin-bottom: 30px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: #4a90d9;
+  }
+
+  .search-hint {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+  }
+
+  .results {
+    list-style: none;
+    padding: 0;
+  }
+
+  .result-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: var(--card-bg);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .result-item img,
+  .result-item a {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .result-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--link-color);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .result-title:hover {
+    text-decoration: underline;
+  }
+
+  .result-excerpt {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 40px 0;
+    color: #888;
+  }
+
+  .loading {
+    text-align: center;
+    padding: 40px 0;
+    color: #888;
+  }
+
+  .search-stats {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+  }
+
+  .result-meta {
+    font-size: 12px;
+    color: #999;
+    margin-top: 8px;
+  }
+</style>
+
+<BaseLayout title="Search | krya">
+  <NavBar slot="header" />
+  
+  <div class="search-page">
+    <h1>Search</h1>
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="search-input"
+        class="search-input" 
+        placeholder="Enter keywords to search articles..."
+        autocomplete="off"
+      />
+      <div class="search-hint">Supports Chinese and English keywords</div>
+    </div>
+    
+    <div id="search-stats" class="search-stats"></div>
+    <div id="search-results">
+      <div class="loading">Loading search index...</div>
+    </div>
+  </div>
+  
+  <script is:inline>
+    (function() {
+      let searchIndex = null;
+      let bm25 = null;
+      
+      // Escape HTML special characters
+      function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+      
+      // Truncate text to specified length
+      function truncate(text, maxLen) {
+        if (text.length <= maxLen) return text;
+        return text.substring(0, maxLen) + '...';
+      }
+      
+      // Calculate BM25 score for a document
+      function bm25Score(docTokens, queryTokens, avgDocLen, totalDocs) {
+        const k1 = 1.2;
+        const b = 0.75;
+        let score = 0;
+        
+        for (const term of queryTokens) {
+          let df = 0;
+          let tf = 0;
+          
+          for (const tokens of docTokens) {
+            const count = tokens.filter(t => t === term).length;
+            if (count > 0) df++;
+          }
+          
+          tf = docTokens.reduce((sum, tokens) => {
+            return sum + tokens.filter(t => t === term).length;
+          }, 0);
+          
+          if (df === 0) continue;
+          
+          const idf = Math.log((totalDocs - df + 0.5) / (df + 0.5) + 1);
+          const docLen = docTokens.flat().length;
+          const numerator = tf * (k1 + 1);
+          const denominator = tf + k1 * (1 - b + b * (docLen / avgDocLen));
+          
+          score += idf * (numerator / denominator);
+        }
+        
+        return score;
+      }
+      
+      // Tokenize text (Chinese + English)
+      function tokenize(text) {
+        const english = text.match(/[a-zA-Z]+/g) || [];
+        const chinese = text.match(/[\u4e00-\u9fff]+/g) || [];
+        const chineseChars = chinese.flatMap(word => word.split(''));
+        return [...english.map(w => w.toLowerCase()), ...chineseChars];
+      }
+      
+      async function loadIndex() {
+        try {
+          const response = await fetch('/search-index.json');
+          const data = await response.json();
+          searchIndex = data;
+          bm25 = data.documents.map(doc => tokenize(doc.title + ' ' + (doc.excerpt || '') + ' ' + (doc.content || '')));
+          document.getElementById('search-results').innerHTML = '';
+          document.getElementById('search-input').focus();
+        } catch (e) {
+          document.getElementById('search-results').innerHTML = '<div class="no-results">Failed to load search index. Please try again later.</div>';
+        }
+      }
+      
+      function executeSearch(query) {
+        if (!searchIndex || !query.trim()) {
+          document.getElementById('search-results').innerHTML = '';
+          document.getElementById('search-stats').textContent = '';
+          return;
+        }
+        
+        const queryTokens = tokenize(query);
+        const totalDocs = searchIndex.documents.length;
+        const avgDocLen = bm25.reduce((sum, tokens) => sum + tokens.length, 0) / totalDocs;
+        
+        const results = searchIndex.documents.map((doc, i) => {
+          const score = bm25Score(bm25, queryTokens, avgDocLen, totalDocs);
+          return { ...doc, score, index: i };
+        }).filter(r => r.score > 0).sort((a, b) => b.score - a.score);
+        
+        const statsEl = document.getElementById('search-stats');
+        statsEl.textContent = `Found ${results.length} results`;
+        
+        const resultsEl = document.getElementById('search-results');
+        if (results.length === 0) {
+          resultsEl.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
+          return;
+        }
+        
+        resultsEl.innerHTML = '<ul class="results">' + results.slice(0, 20).map(r => `
+          <li class="result-item">
+            <a href="/post/${r.slug}" class="result-title">${escapeHtml(r.title)}</a>
+            ${r.excerpt ? `<div class="result-excerpt">${escapeHtml(truncate(r.excerpt, 200))}</div>` : ''}
+            <div class="result-meta">${r.date} · ${r.wordCount} words</div>
+          </li>
+        `).join('') + '</ul>';
+      }
+      
+      // Load index on page load
+      loadIndex();
+      
+      // Listen for input
+      let debounceTimer;
+      document.getElementById('search-input').addEventListener('input', function(e) {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => executeSearch(e.target.value), 200);
+      });
+    })();
+  </script>
+</BaseLayout>

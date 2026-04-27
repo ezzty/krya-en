@@ -1,0 +1,13 @@
+---
+import HomeLayout from '../layouts/HomeLayout.astro';
+import { getCollection } from 'astro:content';
+import { formatPosts } from '../lib/utils';
+
+const posts = (await getCollection('posts')).filter(post => !post.data.draft);
+const PAGE_SIZE = 8;
+
+# Format first page posts
+const { posts: formattedPosts, totalPages } = formatPosts(posts, PAGE_SIZE, 1);
+---
+
+<HomeLayout posts={formattedPosts} currentPage={1} totalPages={totalPages} />

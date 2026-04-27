@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import { formatDate, truncateExcerpt, getPageNumbers } from '../lib/utils';
+
+interface Post {
+  title: string;
+  slug: string;
+  author: string;
+  pubDate: string;
+  wordCount: number;
+  excerpt: string;
+  thumbnail?: string;
+}
+
+interface Props {
+  posts: Post[];
+  currentPage?: number;
+  totalPages?: number;
+}
+
+const { posts, currentPage = 1, totalPages = 1 } = Astro.props;
+
+// Generate page numbers (show up to 5)
+const pageNumbers = getPageNumbers(currentPage, totalPages);
+---
+
+<BaseLayout title="krya">
+  <NavBar slot="header" />
+  
+  <div class="col-mb-12" id="main" role="main">
+    {posts.map((post) => (
+      <article class="post">
+        <div class="col-3 index-image">
+          <a href={`/post/${post.slug}`} class="thumbnail-link">
+            <picture>
+              <source 
+                media="(min-width: 800px)" 
+                srcset={(post.thumbnail || '/images/default-thumbnail.png') + ' 140w'}
+                sizes="140px"
+              />
+              <img 
+                class="thumbnail" 
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                alt={post.title}
+                width="140"
+                height="140"
+                decoding="async"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
+        <h1 class="col-9 post-title">
+          <a href={`/post/${post.slug}`}>{post.title}</a>
+        </h1>
+        <ul class="col-9 post-meta">
+          <li>By: <a href="/about">{post.author}</a></li>
+          <li>{formatDate(post.pubDate)}</li>
+          <li>{post.wordCount} words</li>
+        </ul>
+        <div class="col-9 post-content">
+          {truncateExcerpt(post.excerpt)}...
+        </div>
+      </article>
+    ))}
+    
+    {totalPages > 1 && (
+      <nav class="pagination">
+        <ul class="page-list">
+          {/* Previous page */}
+          {currentPage > 1 && (
+            <li class="page-item">
+              <a href={currentPage === 2 ? '/' : `/p/${currentPage - 1}`} class="page-link">&laquo;</a>
+            </li>
+          )}
+          
+          {/* Page numbers */}
+          {pageNumbers.map((page) => (
+            <li class="page-item">
+              <a 
+                href={page === 1 ? '/' : `/p/${page}`} 
+                class={`page-link ${page === currentPage ? 'active' : ''}`}
+              >
+                {page}
+              </a>
+            </li>
+          ))}
+          
+          {/* Next page */}
+          {currentPage < totalPages && (
+            <li class="page-item">
+              <a href={`/p/${currentPage + 1}`} class="page-link">&raquo;</a>
+            </li>
+          )}
+        </ul>
+      </nav>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  /* Thumbnail link - remove default underline */
+  .thumbnail-link {
+    display: block;
+    border-bottom: none !important;
+  }
+  
+  .thumbnail-link:hover {
+    border-bottom: none !important;
+  }
+  
+  /* Home thumbnail hover zoom effect */
+  .index-image {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .index-image picture,
+  .index-image img.thumbnail {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .index-image img.thumbnail {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+  }
+  
+  .index-image:hover img.thumbnail {
+    transform: scale(1.1);
+  }
+  
+  .pagination {
+    margin: 60px 0 40px;
+    text-align: center;
+  }
+  
+  .page-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 8px;
+  }
+  
+  .page-item {
+    display: inline-block;
+  }
+  
+  .page-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    text-align: center;
+  }
+  
+  /* Light mode */
+  .page-link {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  
+  .page-link:hover {
+    background-color: #e8e8e8;
+    border-color: #ccc;
+  }
+  
+  .page-link.active {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Dark mode */
+  html[data-theme="dark"] .page-link {
+    background-color: #303030;
+    border: 1px solid #3d3d3d;
+    color: #999;
+  }
+  
+  html[data-theme="dark"] .page-link:hover {
+    background-color: #434343;
+    border-color: #3a3a3a;
+  }
+  
+  html[data-theme="dark"] .page-link.active {
+    background-color: #505050;
+    border-color: #4e4e4e;
+    color: #fff;
+    font-weight: 700;
+  }
+</style>

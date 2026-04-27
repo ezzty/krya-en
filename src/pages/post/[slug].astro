@@ -1,0 +1,42 @@
+---
+import PostLayout from '../../layouts/PostLayout.astro';
+import Twikoo from '../../components/Twikoo.astro';
+import { getEntry, render, getCollection } from 'astro:content';
+import { countWords, stripMarkdown, extractFirstImage, processThumbnailUrl } from '../../lib/utils';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts')).filter(post => !post.data.draft);
+  
+  return posts.map((post) => ({
+      params: {
+        slug: post.id.replace(/\.[^.]+$/, ''),
+      },
+    props: {
+      postId: post.id,
+      wordCount: countWords(post.body || ''),
+      // Hybrid: use frontmatter description, or auto-extract if missing
+      description: post.data.description || stripMarkdown(post.body || '').slice(0, 150),
+      // Thumbnail for og:image
+      thumbnail: processThumbnailUrl(post.data.thumbnail || extractFirstImage(post.body || '')) || undefined,
+    },
+  }));
+}
+
+const { postId, wordCount, description, thumbnail } = Astro.props;
+const post = await getEntry('posts', postId);
+const { Content } = await render(post);
+---
+
+<PostLayout
+  title={post.data.title}
+  description={description}
+  author={post.data.author || 'Jin'}
+  pubDate={post.data.pubDate.toISOString()}
+  wordCount={wordCount}
+  tags={post.data.tags || []}
+  categories={post.data.categories || []}
+  thumbnail={thumbnail}
+>
+  <Content />
+  <Twikoo slot="comments" />
+</PostLayout>

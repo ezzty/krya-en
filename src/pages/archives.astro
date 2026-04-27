@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import { getCollection } from 'astro:content';
+import { formatDate } from '../lib/utils';
+
+const posts = (await getCollection('posts')).filter(post => !post.data.draft);
+
+// Group by year and month
+const groupedPosts: Record<string, typeof posts> = {};
+
+posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+}).forEach((post) => {
+  const date = new Date(post.data.pubDate);
+  const yearMonth = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+  
+  if (!groupedPosts[yearMonth]) {
+    groupedPosts[yearMonth] = [];
+  }
+  groupedPosts[yearMonth].push(post);
+});
+---
+
+<BaseLayout title="Archives - krya">
+  <NavBar slot="header" />
+  
+  <div class="col-mb-12" id="main" role="main">
+    <article class="post">
+      <h1 class="post-title">Archives</h1>
+      
+      {Object.entries(groupedPosts).map(([yearMonth, posts]) => {
+        const [year, month] = yearMonth.split('-');
+        return (
+          <div class="archive-group">
+            <h2 class="archive-year">{year}.{month}</h2>
+            <ul class="archive-list">
+              {posts.map((post) => (
+                <li>
+                  <span class="archive-date">{formatDate(post.data.pubDate.toISOString())}</span>
+                  <a href={`/post/${post.id.replace(/\.[^.]+$/, '')}`}>{post.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
+    </article>
+  </div>
+</BaseLayout>

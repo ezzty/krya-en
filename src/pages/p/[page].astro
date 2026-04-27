@@ -1,0 +1,31 @@
+---
+import HomeLayout from '../../layouts/HomeLayout.astro';
+import { getCollection } from 'astro:content';
+import { formatPosts } from '../../lib/utils';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts')).filter(post => !post.data.draft);
+  const PAGE_SIZE = 8;
+  
+  const { totalPages } = formatPosts(posts, PAGE_SIZE, 1);
+  
+  // Return page 2 to the last page
+  return Array.from({ length: totalPages - 1 }, (_, i) => {
+    const page = i + 2;
+    const { posts: formattedPosts } = formatPosts(posts, PAGE_SIZE, page);
+    
+    return {
+      params: { page: page.toString() },
+      props: {
+        posts: formattedPosts,
+        currentPage: page,
+        totalPages,
+      },
+    };
+  });
+}
+
+const { posts: formattedPosts, currentPage, totalPages } = Astro.props;
+---
+
+<HomeLayout posts={formattedPosts} currentPage={currentPage} totalPages={totalPages} />

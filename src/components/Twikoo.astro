@@ -1,0 +1,125 @@
+---
+// Twikoo 评论组件
+// 文档：https://twikoo.js.org/
+
+interface Props {
+  envId?: string;
+  region?: string;
+}
+
+const { envId = 'https://cm.krya.com/', region = '' } = Astro.props;
+---
+
+<div class="twikoo-container" id="twikoo" data-env-id={envId}></div>
+
+<script is:inline>
+  function applyDarkMode() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const twikooContainer = document.querySelector('.twikoo-container');
+    if (twikooContainer) {
+      twikooContainer.classList.toggle('twikoo-dark', isDark);
+    }
+  }
+
+  function watchThemeChange() {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+          applyDarkMode();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  }
+
+  async function initTwikoo() {
+    try {
+      const container = document.getElementById('twikoo');
+      const envId = container?.getAttribute('data-env-id') || 'https://cm.krya.com/';
+      
+      const script = document.createElement('script');
+      script.src = 'https://s4.zstatic.net/npm/twikoo@1.7.7/dist/twikoo.min.js';
+      await new Promise((resolve, reject) => {
+        script.onload = resolve;
+        script.onerror = () => reject(new Error('Failed to load Twikoo SDK'));
+        document.head.appendChild(script);
+      });
+      
+      window.twikoo.init({
+        envId: envId,
+        el: '#twikoo',
+        lang: 'zh-CN',
+        onCommentLoaded: () => {
+          console.log('Twikoo 评论加载完成');
+          applyDarkMode();
+        }
+      });
+    } catch (error) {
+      console.error('Twikoo 初始化失败:', error);
+    }
+  }
+
+  initTwikoo();
+  watchThemeChange();
+</script>
+
+<style is:inline>
+  .twikoo-container {
+    margin-top: 60px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .twikoo-container.twikoo-dark {
+    background: #1e1e1e;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* 暗黑模式 - 核心元素 */
+  .twikoo-container.twikoo-dark .tk-input textarea,
+  .twikoo-container.twikoo-dark .tk-input input {
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .twikoo-container.twikoo-dark .tk-input textarea:focus,
+  .twikoo-container.twikoo-dark .tk-input input:focus {
+    border-color: #5a8bff !important;
+  }
+
+  .twikoo-container.twikoo-dark .tk-submit-action-btn {
+    background-color: #3354aa !important;
+    color: #fff !important;
+  }
+
+  .twikoo-container.twikoo-dark .tk-submit-action-btn:hover {
+    background-color: #5a8bff !important;
+  }
+
+  .twikoo-container.twikoo-dark .tk-nick {
+    color: #5a8bff !important;
+  }
+
+  .twikoo-container.twikoo-dark .tk-content {
+    color: #e0e0e0 !important;
+  }
+
+  .twikoo-container.twikoo-dark .tk-content a {
+    color: #5a8bff !important;
+  }
+
+  .twikoo-container.twikoo-dark .tk-tag {
+    background-color: #3354aa !important;
+    color: #fff !important;
+  }
+
+  @media (max-width: 768px) {
+    .twikoo-container {
+      margin-top: 40px;
+      padding: 15px;
+    }
+  }
+</style>
