@@ -1,5 +1,1 @@
-[build]
-command = "npm run build"
-
-[build.output]
-directory = "dist"
+pages_build_output_dir = "dist"
