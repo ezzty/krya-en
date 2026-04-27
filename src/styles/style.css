@@ -29,24 +29,29 @@ html[data-theme="dark"] {
 
 body {
   background-color: #fff;
-  color: #333;
-  font-family: Georgia, "Times New Roman", "Noto Serif", serif;
-  font-size: 100%;
-  line-height: 1.75;
+  color: rgba(0, 0, 0, 0.84);
+  font-family: "Source Serif Pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 131.25%; /* ~21px */
+  line-height: 1.58;
+  letter-spacing: -0.003em;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
-  color: #3354AA;
+  color: #242424;
   text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  transition: border-color 0.15s ease;
 }
 
 a:hover, a:active {
-  color: #444;
+  color: #000;
+  border-bottom-color: rgba(0, 0, 0, 0.4);
 }
 
 /* 作者链接颜色与"作者"文字一致 */
@@ -54,11 +59,29 @@ a:hover, a:active {
   color: #999;
 }
 
-pre, code {
-  padding: 2px 4px;
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.85em;
+  padding: 0.2em 0.4em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+pre {
+  padding: 16px;
+  overflow: auto;
+  max-height: 400px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+pre code {
+  padding: 0;
   background: none;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Consolas, "Courier New", monospace;
-  font-size: 0.9em;
+  font-size: 1em;
+  color: inherit;
 }
 
 code {
@@ -79,9 +102,11 @@ pre code {
 }
 
 blockquote {
-  margin: 1em 1em;
-  padding-left: 1.5em;
-  border-left: 2px solid #F3F3F0;
+  margin: 0 0 1.5em 0;
+  padding: 0 0 0 1.5em;
+  border-left: 3px solid rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
 }
 
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], textarea {
@@ -153,12 +178,14 @@ textarea {
 }
 
 .post-title {
-  margin: 0 0 0.5em 0;
-  font-size: 1.5em;
+  margin: 0 0 0.2em 0;
+  font-size: 2em;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  letter-spacing: -0.04em;
   text-align: left;
-  line-height: 1.3;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.92);
 }
 
 @media (min-width: 800px) {
@@ -174,10 +201,11 @@ textarea {
 .post-meta {
   text-align: left;
   padding: 0;
-  margin: 0.5em 0;
-  color: #888;
-  font-size: 0.9em;
+  margin: 0.5em 0 0 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.85em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0;
   list-style: none;
 }
 
@@ -195,12 +223,16 @@ textarea {
 }
 
 .post-content {
-  margin-top: 0.2em;
-  font-size: 1.05em;
-  line-height: 1.8;
+  margin-top: 1.5em;
+  font-size: 1em;
+  line-height: 1.58;
   text-align: left;
   word-wrap: break-word;
-  hyphens: auto;
+  hyphens: none;
+}
+
+.post-content p {
+  margin-bottom: 1.5em;
 }
 
 /* 移除 post-content 内第一个元素的 margin-top，避免与首页不一致 */
@@ -217,7 +249,9 @@ textarea {
 .post-content img,
 .post-content video {
   max-width: 100%;
-  padding-top: 10px;
+  height: auto;
+  margin: 1.5em 0;
+  border-radius: 2px;
 }
 
 .post-content hr {
@@ -286,8 +320,8 @@ textarea {
 }
 
 html[data-theme="dark"] body {
-  background-color: #252525;
-  color: #e0e0e0;
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.84);
 }
 
 /* 暗黑模式下 Logo 颜色与正文一致 */
@@ -297,21 +331,22 @@ html[data-theme="dark"] .logo-image {
 }
 
 html[data-theme="dark"] a {
-  color: #6b9eff;
+  color: rgba(255, 255, 255, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
 html[data-theme="dark"] a:hover,
 html[data-theme="dark"] a:active {
-  color: #9bbcff;
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
 }
 
-html[data-theme="dark"] pre,
-html[data-theme="dark"] code {
-  background: none;
+html[data-theme="dark"] pre code {
+  color: rgba(255, 255, 255, 0.84);
 }
 
 html[data-theme="dark"] code {
-  color: #6b9eff;
+  color: rgba(255, 255, 255, 0.84);
 }
 
 html[data-theme="dark"] pre code {
@@ -319,7 +354,8 @@ html[data-theme="dark"] pre code {
 }
 
 html[data-theme="dark"] blockquote {
-  border-left-color: #3a3a3a;
+  border-left-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 html[data-theme="dark"] input[type="text"],
@@ -338,19 +374,19 @@ html[data-theme="dark"] .cd-auto-hide-header {
 }
 
 html[data-theme="dark"] .post {
-  border-bottom-color: #3a3a3a;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 html[data-theme="dark"] .post-title a {
-  color: #e0e0e0;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 html[data-theme="dark"] .post-meta {
-  color: #999;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 html[data-theme="dark"] .post-meta a {
-  color: #999;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 html[data-theme="dark"] .post-meta li {
@@ -358,7 +394,7 @@ html[data-theme="dark"] .post-meta li {
 }
 
 html[data-theme="dark"] .post-content {
-  color: #c0c0c0;
+  color: rgba(255, 255, 255, 0.84);
 }
 
 html[data-theme="dark"] #footer {
@@ -378,7 +414,7 @@ html[data-theme="dark"] #footer .social-link:hover {
 }
 
 html[data-theme="dark"] .post-content hr {
-  border-color: #3a3a3a;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* -----------------------------------------------------
