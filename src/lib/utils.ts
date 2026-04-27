@@ -145,7 +145,7 @@ export function formatPosts(posts: any[], pageSize: number, page: number = 1): F
       author: post.data.author || 'Jin',
       pubDate: post.data.pubDate.toISOString(),
       wordCount,
-      excerpt: post.data.description || plainText.slice(0, 70),
+      excerpt: post.data.description || plainText.slice(0, 100),
       thumbnail,
     };
   });
