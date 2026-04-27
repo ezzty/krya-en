@@ -377,6 +377,10 @@ html[data-theme="dark"] .post-title a {
   color: rgba(255, 255, 255, 0.95);
 }
 
+html[data-theme="dark"] .post-title {
+  color: rgba(255, 255, 255, 0.95);
+}
+
 html[data-theme="dark"] .post-meta {
   color: rgba(255, 255, 255, 0.5);
 }
