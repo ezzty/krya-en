@@ -6,7 +6,7 @@
   "author": "Jin",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/post-build-image-processor.js",
+    "build": "python3 search.py && astro build && node scripts/post-build-image-processor.js",
     "preview": "astro preview"
   },
   "dependencies": {
