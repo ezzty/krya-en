@@ -17,7 +17,7 @@ interface Props {
 const { title, description, author, pubDate, wordCount = 0, tags = [], categories = [], thumbnail } = Astro.props;
 
 // Process og:image URL
-const ogImage = thumbnail || 'https://krya.com/og-image.png';
+const ogImage = thumbnail || 'https://en.krya.com/og-image.png';
 ---
 
 <BaseLayout title={title} description={description || "Jin's personal blog"}>

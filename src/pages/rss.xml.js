@@ -19,7 +19,7 @@ export async function GET(context) {
   return rss({
     title: 'krya | Jin\'s Blog',
     description: 'Jin\'s personal blog - travel, life, thoughts',
-    site: 'https://krya.com',
+    site: 'https://en.krya.com',
     items: await Promise.all(sortedPosts.map(async (post) => {
       const markdownContent = post.body || '';
       const htmlString = await marked.parse(markdownContent);

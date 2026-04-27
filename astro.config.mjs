@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://krya.com',
+  site: 'https://en.krya.com',
   output: 'static',
   compressHTML: true,
   markdown: {

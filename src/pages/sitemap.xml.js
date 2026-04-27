@@ -11,7 +11,7 @@ export async function GET() {
     return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
   });
 
-  const siteUrl = 'https://krya.com';
+  const siteUrl = 'https://en.krya.com';
   
   // Collect all categories and tags (using published posts)
   const categorySet = new Set();
