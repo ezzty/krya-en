@@ -150,19 +150,30 @@ def main():
     bm25_index = calculate_bm25_index(articles)
     
     # 构建输出格式（前端兼容）
+    # 前端期望: { documents: [{ slug, title, date, excerpt, content, wordCount }, ...] }
+    documents = []
+    for art in articles:
+        # Read the full markdown content for searching
+        md_file = next((f for f in CONTENT_DIR.glob("*.md") if f.stem == art['id']), None)
+        content_text = ""
+        if md_file:
+            raw = md_file.read_text(encoding='utf-8')
+            content_text = re.sub(r'^---\s*\n.*?\n---\s*\n', '', raw, flags=re.DOTALL)
+            
+        # Clean content for display in JSON (remove images to keep size small, keep text)
+        clean_content = re.sub(r'!\[[^\]]*\]\([^)]+\)', '', content_text)
+        
+        documents.append({
+            'slug': art['id'],
+            'title': art['title'],
+            'date': art['date'],
+            'excerpt': art['excerpt'],
+            'content': clean_content,
+            'wordCount': len(art['tokens']) # Approximate word count
+        })
+        
     output = {
-        'posts': [
-            {
-                'id': art['id'],
-                'title': art['title'],
-                'date': art['date'],
-                'categories': art['categories'],
-                'tags': art['tags'],
-                'excerpt': art['excerpt'],
-            }
-            for art in articles
-        ],
-        'index': bm25_index,
+        'documents': documents
     }
     
     # 保存 JSON
