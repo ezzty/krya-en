@@ -131,120 +131,149 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div>
   
-  <script is:inline>
-    (function() {
-      let searchIndex = null;
-      let bm25 = null;
-      
-      // Escape HTML special characters
-      function escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
+<script>
+  // BM25 搜索算法（前端版）
+  class BM25Search {
+    constructor(data) {
+      this.posts = data.posts;
+      this.documents = {};
+      this.docLengths = {};
+      this.avgDocLength = data.index.avg_doc_length;
+      this.idf = data.index.idf;
+      this.k1 = 1.5;
+      this.b = 0.75;
+
+      // 重建文档索引
+      for (const [docId, tokens] of Object.entries(data.index.documents)) {
+        this.documents[docId] = {};
+        for (const [token, count] of Object.entries(tokens)) {
+          this.documents[docId][token] = count;
+        }
       }
-      
-      // Truncate text to specified length
-      function truncate(text, maxLen) {
-        if (text.length <= maxLen) return text;
-        return text.substring(0, maxLen) + '...';
-      }
-      
-      // Calculate BM25 score for a document
-      function bm25Score(docTokens, queryTokens, avgDocLen, totalDocs) {
-        const k1 = 1.2;
-        const b = 0.75;
-        let score = 0;
-        
-        for (const term of queryTokens) {
-          let df = 0;
-          let tf = 0;
-          
-          for (const tokens of docTokens) {
-            const count = tokens.filter(t => t === term).length;
-            if (count > 0) df++;
+      this.docLengths = data.index.doc_lengths;
+    }
+
+    tokenize(text) {
+      // 英文单词
+      const words = (text.match(/[a-zA-Z]+/g) || []).map(w => w.toLowerCase());
+      // 中文 2-3 字 n-gram
+      const chinese = [];
+      for (let i = 0; i < text.length - 1; i++) {
+        const char = text[i];
+        if (/[\u4e00-\u9fff]/.test(char)) {
+          chinese.push(text.slice(i, i + 2));
+          if (i < text.length - 2) {
+            chinese.push(text.slice(i, i + 3));
           }
-          
-          tf = docTokens.reduce((sum, tokens) => {
-            return sum + tokens.filter(t => t === term).length;
-          }, 0);
-          
-          if (df === 0) continue;
-          
-          const idf = Math.log((totalDocs - df + 0.5) / (df + 0.5) + 1);
-          const docLen = docTokens.flat().length;
-          const numerator = tf * (k1 + 1);
-          const denominator = tf + k1 * (1 - b + b * (docLen / avgDocLen));
-          
-          score += idf * (numerator / denominator);
-        }
-        
-        return score;
-      }
-      
-      // Tokenize text (Chinese + English)
-      function tokenize(text) {
-        const english = text.match(/[a-zA-Z]+/g) || [];
-        const chinese = text.match(/[\u4e00-\u9fff]+/g) || [];
-        const chineseChars = chinese.flatMap(word => word.split(''));
-        return [...english.map(w => w.toLowerCase()), ...chineseChars];
-      }
-      
-      async function loadIndex() {
-        try {
-          const response = await fetch('/search-index.json');
-          const data = await response.json();
-          searchIndex = data;
-          bm25 = data.documents.map(doc => tokenize(doc.title + ' ' + (doc.excerpt || '') + ' ' + (doc.content || '')));
-          document.getElementById('search-results').innerHTML = '';
-          document.getElementById('search-input').focus();
-        } catch (e) {
-          document.getElementById('search-results').innerHTML = '<div class="no-results">Failed to load search index. Please try again later.</div>';
         }
       }
-      
-      function executeSearch(query) {
-        if (!searchIndex || !query.trim()) {
-          document.getElementById('search-results').innerHTML = '';
-          document.getElementById('search-stats').textContent = '';
-          return;
+      return [...words, ...chinese];
+    }
+
+    search(query, topK = 10) {
+      const queryTokens = this.tokenize(query);
+      const scores = {};
+
+      for (const [docId, docTokens] of Object.entries(this.documents)) {
+        let score = 0;
+        const docLen = this.docLengths[docId];
+
+        for (const term of queryTokens) {
+          if (!(term in docTokens)) continue;
+
+          const tf = docTokens[term];
+          const idf = this.idf[term] || 0;
+          const numerator = tf * (this.k1 + 1);
+          const denominator = tf + this.k1 * (1 - this.b + this.b * docLen / this.avgDocLength);
+          score += idf * numerator / denominator;
         }
-        
-        const queryTokens = tokenize(query);
-        const totalDocs = searchIndex.documents.length;
-        const avgDocLen = bm25.reduce((sum, tokens) => sum + tokens.length, 0) / totalDocs;
-        
-        const results = searchIndex.documents.map((doc, i) => {
-          const score = bm25Score(bm25, queryTokens, avgDocLen, totalDocs);
-          return { ...doc, score, index: i };
-        }).filter(r => r.score > 0).sort((a, b) => b.score - a.score);
-        
-        const statsEl = document.getElementById('search-stats');
-        statsEl.textContent = `Found ${results.length} results`;
-        
-        const resultsEl = document.getElementById('search-results');
-        if (results.length === 0) {
-          resultsEl.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
-          return;
+
+        if (score > 0) {
+          scores[docId] = score;
         }
-        
-        resultsEl.innerHTML = '<ul class="results">' + results.slice(0, 20).map(r => `
+      }
+
+      // 排序
+      return Object.entries(scores)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, topK);
+    }
+  }
+
+  let searchEngine = null;
+
+  // 加载索引
+  async function loadIndex() {
+    try {
+      const response = await fetch('/search-index.json');
+      const data = await response.json();
+      searchEngine = new BM25Search(data);
+      document.getElementById('search-results').innerHTML = '<p class="loading">Enter keywords to start searching</p>';
+    } catch (error) {
+      document.getElementById('search-results').innerHTML = 
+        '<p class="no-results">Failed to load index. Please try again later.</p>';
+      console.error('Failed to load search index:', error);
+    }
+  }
+
+  // 执行搜索
+  function performSearch(query) {
+    if (!searchEngine || !query.trim()) {
+      document.getElementById('search-results').innerHTML = '';
+      return;
+    }
+
+    const results = searchEngine.search(query, 20);
+    const resultsDiv = document.getElementById('search-results');
+
+    if (results.length === 0) {
+      resultsDiv.innerHTML = '<p class="no-results">No results found</p>';
+      return;
+    }
+
+    const html = `<ul class="results">
+      ${results.map(([docId, score]) => {
+        const post = searchEngine.posts[docId];
+        const title = post ? post.title : docId;
+        const excerpt = post ? post.excerpt : '';
+        return `
           <li class="result-item">
-            <a href="/post/${r.slug}" class="result-title">${escapeHtml(r.title)}</a>
-            ${r.excerpt ? `<div class="result-excerpt">${escapeHtml(truncate(r.excerpt, 200))}</div>` : ''}
-            <div class="result-meta">${r.date} · ${r.wordCount} words</div>
+            <a href="/post/${post ? post.slug : docId}" class="result-title">
+              ${escapeHtml(title)}
+              <span class="result-score">${score.toFixed(2)}</span>
+            </a>
+            ${excerpt ? `<p class="result-excerpt">${escapeHtml(excerpt)}</p>` : ''}
           </li>
-        `).join('') + '</ul>';
-      }
-      
-      // Load index on page load
-      loadIndex();
-      
-      // Listen for input
-      let debounceTimer;
-      document.getElementById('search-input').addEventListener('input', function(e) {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => executeSearch(e.target.value), 200);
-      });
-    })();
-  </script>
+        `;
+      }).join('')}\n    </ul>`;
+
+    resultsDiv.innerHTML = html;
+  }
+
+  // HTML 转义
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  // 初始化
+  loadIndex();
+
+  // 搜索输入
+  let debounceTimer;
+  document.getElementById('search-input').addEventListener('input', (e) => {
+    clearTimeout(debounceTimer);
+    const query = e.target.value.trim();
+    
+    if (!query) {
+      document.getElementById('search-results').innerHTML = '';
+      return;
+    }
+
+    debounceTimer = setTimeout(() => {
+      performSearch(query);
+    }, 300);
+  });
+</script>
 </BaseLayout>

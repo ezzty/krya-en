@@ -173,7 +173,8 @@ def main():
         })
         
     output = {
-        'documents': documents
+        'posts': documents,
+        'index': bm25_index,
     }
     
     # 保存 JSON
