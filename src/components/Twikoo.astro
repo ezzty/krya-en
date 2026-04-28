@@ -48,7 +48,6 @@ const { envId = 'https://cm.krya.com/', region = '' } = Astro.props;
       window.twikoo.init({
         envId: envId,
         el: '#twikoo',
-        lang: 'zh-CN',
         onCommentLoaded: () => {
           console.log('Twikoo 评论加载完成');
           applyDarkMode();
