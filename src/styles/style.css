@@ -457,9 +457,9 @@ html[data-theme="dark"] .post-content hr {
     margin-bottom: 0.2em;
   }
   
-  /* 移动端正文顶部间距设为 0，避免跳动 */
+  /* 移动端正文顶部间距设为 0.5em，避免跳动 */
   .post-content {
-    margin-top: 0;
+    margin-top: 0.5em;
   }
   
   /* 移除 post-content 内第一个段落的 margin-top，避免跳动 */
