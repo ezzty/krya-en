@@ -230,7 +230,7 @@ textarea {
 }
 
 .post-content p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 /* 移除 post-content 内第一个元素的 margin-top，避免与首页不一致 */
