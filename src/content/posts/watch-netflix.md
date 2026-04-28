@@ -1,5 +1,5 @@
 ---
-title: "A Technical Guide to Watching Netflix"
+title: "A Technical Guide to Watching Netflix in China"
 pubDate: 2019-03-03
 categories: ["Technology"]
 tags: ["Watching Netflix in China", "Watching Netflix on TV", "Domestic Netflix", "Netflix at home"]

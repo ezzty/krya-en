@@ -1,5 +1,5 @@
 ---
-title: Migrating from Typecho to Astro
+title: How to deploy a static blog for free using Astro
 pubDate: 2026-04-20
 author: jin
 draft: false
@@ -55,4 +55,4 @@ This Astro single-column template theme was designed and built by myself. I rece
 
 This theme is open source. If you like it, you can also tip the author:
 
-[https://github.com/ezzty/astro-sintu-theme](https://github.com/ezzty/astro-sintu-theme)
+[https://github.com/ezzty/krya-en](https://github.com/ezzty/krya-en)
