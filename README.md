@@ -41,7 +41,7 @@ npm run preview
 - Twikoo Comment system：https://twikoo.js.org/en/
 
 
-### Theme Colors 主题颜色
+### Theme Colors 
 
 - Edit  `src/styles/variables.css`  to customize the theme colors.
 
@@ -65,7 +65,7 @@ docker build -t astro-sintu-theme .
 docker run -p 8080:80 astro-sintu-theme
 ```
 
-## Tech Stack 技术栈
+## Tech Stack 
 
 - [Astro](https://astro.build/) 
 - TypeScript 
