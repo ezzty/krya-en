@@ -18,7 +18,7 @@ Recently I got into vibe coding and tried running the qwen2.5vl:3b vision model 
 
 Running larger models requires more memory. Right now, RAM is more expensive than gold. For an average person to spend a fortune building a high-end local model, it's simply not cost-effective. And on the other hand, a $1,000–$2,000 local setup will never be faster or more powerful than cloud models.
 
-Last year, when the Mac mini was subsidized down to around 2,600 yuan, I considered buying one. But I held back for practical reasons. This year, the surge in popularity of Llama/Ollama drove Mac mini prices up again, and since I already had a Linux machine that could run them, I still didn't make the move.
+Last year, when the Mac mini was subsidized down to around 2,600 yuan, I considered buying one. But I held back for practical reasons. This year, the surge in popularity of OpenClaw drove Mac mini prices up again, and since I already had a Linux machine that could run it, I still didn't make the move.
 
 But this time, I finally found a reason to buy it: 16GB of memory, enough to run the qwen2.5vl:7b model — image recognition in just a few seconds at 720p. So I didn't hesitate and bought one on Xianyu (China's secondhand marketplace) for a little over 3,500 yuan.
 
