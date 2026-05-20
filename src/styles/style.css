@@ -543,7 +543,7 @@ html[data-theme="dark"] .post-content hr {
 
 .category-item:hover .category-count,
 .tag-item:hover .tag-count {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .category-name,
