@@ -20,7 +20,7 @@ const categories = Array.from(categoryCount.entries()).sort((a, b) => b[1] - a[1
   <NavBar slot="header" />
   <div class="container">
     <div class="col-mb-12">
-      <h1 class="categories-title">Categories</h1>
+      <h1 class="categories-title visually-hidden">Categories</h1>
       {categories.length > 0 ? (
         <div class="category-list">
           {categories.map(([category, count]) => (
