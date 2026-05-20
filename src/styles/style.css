@@ -541,6 +541,11 @@ html[data-theme="dark"] .post-content hr {
   color: #fff;
 }
 
+.category-item:hover .category-count,
+.tag-item:hover .tag-count {
+  background-color: transparent;
+}
+
 .category-name,
 .tag-name {
   color: #4d4d4d;
