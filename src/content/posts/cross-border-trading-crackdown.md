@@ -18,7 +18,7 @@ In 2020, I opened an account with Vantive International (a US-based Chinese bank
 
 In 2021, I opened a Tiger Securities account.
 
-This February, I successively opened accounts with Futu Securities, Longbridge Securities, and Interactive Brokers (IBKR), along with a bunch of Hong Kong bank cards.
+February 2025, I successively opened accounts with Futu Securities, Longbridge Securities, and Interactive Brokers (IBKR), along with a bunch of Hong Kong bank cards.
 
 The truth is, I don't actually have a need for large cross-border transfers. I've toyed with the idea of becoming a digital nomad, but never acted on it. My life, family, income, and expenses are all on the mainland — I can't just walk away for now.
 
