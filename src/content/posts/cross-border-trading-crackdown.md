@@ -14,9 +14,7 @@ author: jin
 ---
 ![image](https://i.frc.cc/img/m/20260523/d78921.png)
 
-In 2020, I opened a U.S. VEGA account with Cathay Bank, but the maintenance costs turned out to be so steep that I eventually closed it.
-
-In 2021, I opened an account with Tiger Brokers.
+In 2020, I opened an account with Tiger Brokers; I also opened a U.S. VEGA account with Cathay Bank around the same time, but the maintenance costs turned out to be so steep that I eventually closed it.
 
 Then in February 2025, I went on a spree — opening accounts with Futu, Longbridge, Interactive Brokers (IBKR), and a whole pile of Hong Kong bank cards along the way.
 
