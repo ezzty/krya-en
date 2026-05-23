@@ -36,4 +36,4 @@ After calming down and thinking it through, the actual impact isn't as bad as it
 
 As for the safety of my funds, there's really no need to worry too much. Hong Kong's financial regulatory system is relatively robust — the risk of a platform just disappearing is practically zero.
 
-Bottom line: the impact is real, but it's not catastrophic. There's absolutely no reason to lose sleep over it.
+Bottom line: the impact is real, but it's not catastrophic — no need to overthink it. I'm sitting on a floating loss with my margin position, so all I can do is ride it out. Two-year window, let's see what happens.
