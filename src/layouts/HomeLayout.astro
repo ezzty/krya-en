@@ -71,7 +71,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           {/* Previous page */}
           {currentPage > 1 && (
             <li class="page-item">
-              <a href={currentPage === 2 ? '/' : `/p/${currentPage - 1}`} class="page-link">&laquo;</a>
+              <a href={currentPage === 2 ? '/' : `/p/${currentPage - 1}`} class="page-link">&lt;&lt;</a>
             </li>
           )}
           
@@ -90,7 +90,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           {/* Next page */}
           {currentPage < totalPages && (
             <li class="page-item">
-              <a href={`/p/${currentPage + 1}`} class="page-link">&raquo;</a>
+              <a href={`/p/${currentPage + 1}`} class="page-link">&gt;&gt;</a>
             </li>
           )}
         </ul>
