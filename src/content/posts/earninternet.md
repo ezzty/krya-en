@@ -1,12 +1,13 @@
 ---
-title: Making Money on the Internet
-pubDate: 2024-07-03
+title: "Making Money on the Internet"
+pubDate: '2024-07-03'
+author: jin
+draft: false
 categories:
   - Technology
 tags:
   - Unlocking Streaming Media
   - Internet Expenses
-draft: false
 ---
 
 Entering my forties, the arrogant bravado of my youth has faded away. Earning money to support my family has become life's top priority. I've gradually lost patience for things I can't achieve no matter how hard I try. Over a decade ago, the internet boom was surging forward — new websites and apps emerging endlessly, and everyone was being either embraced or swept along by it. I thought this thriving momentum would last forever, so I actively tried to brush against the edges of the internet. But whatever I studied, I always gave up halfway. Even now, all I can really do is set up a VPS to run a proxy, unlock streaming media, build websites with open-source programs, modify templates, tweak skins, and so on. Apart from making a few tens of thousands of yuan from a couple of websites, none of my other skills found much use as mobile internet rapidly took over.

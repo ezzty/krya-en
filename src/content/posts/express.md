@@ -1,10 +1,13 @@
 ---
 title: "How to Get Delivery Drivers to Bring Packages to Your Door"
-pubDate: 2025-12-05T11:14:29+08:00
-categories: ["Life"]
-tags: ["Delivery to Door", "Courier Lockers"]
+pubDate: '2025-12-05T11:14:29+08:00'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 Last year, the newly revised *Express Delivery Market Management Measures* officially took effect. Among its provisions, the rule that "packages must not be sent to lockers or pickup stations without user consent" sparked widespread discussion.
 
 But this regulation seems to exist only on paper. Many consumers only realize their package has been dropped off at a station or locker after receiving a pickup code. Why is the *Measure* essentially a dead letter? Why do some packages still not get delivered to your door even after you've explicitly requested it? Many consumers who shop online probably share this confusion.

@@ -1,10 +1,13 @@
 ---
 title: "The Greatest of the Three Great Scholars of the Ming Dynasty — Yang Shen"
-pubDate: 2015-08-29
-categories: ["Life"]
-tags: ["Yang Shen's tomb", "Yang Sheng'an's tomb", "Yang Tinghe's tomb, Xindu"]
+pubDate: '2015-08-29'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 During July and August, I used my time commuting on buses, riding elevators, and even sitting on the toilet to finish all seven volumes of *Those Things About the Ming Dynasty*. One day, while browsing a forum, I saw that people were still visiting Zhang Juzheng's tomb, and another user had posted a list of surviving tombs of high-ranking Ming officials. A quick check revealed that Yang Shen's tomb was right here in Xindu District — barely ten kilometers away. I decided on the spot to go visit.
 
 Among the many notable ministers of the Ming Dynasty, Yang Shen's historical weight is relatively light. If I had to choose a few Ming ministers' tombs to visit, I'd pick Zhu Di, Qi Jiguang, and Yang Lian.

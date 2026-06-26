@@ -1,10 +1,13 @@
 ---
 title: "2014 Strawberry Music Festival (Chengdu) Live"
-pubDate: 2014-06-02
-categories: ["Life"]
-tags: ["Chengdu Strawberry Music Festival"]
+pubDate: '2014-06-02'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 This was the Strawberry Music Festival's first time in Chengdu. I usually listen to music on Xiami and knew a few familiar artists, so I went with some friends. Chengdu had just stepped into summer, and the atmosphere at the venue was electric. But the girls' outfits were refreshingly cool — hard to resist. This year's theme was "SNS life is rubbish, get a real life." I couldn't agree more — with so many girls around, who the hell wants to hang out online!
 
 I have to admit Song Dongye was incredibly popular, but this kind of hot, intense music really needs more rhythm. Re-TROS had an amazing live presence. Lao Lang played all nostalgic songs: *Model Love Letter*, *The Brother Who Slept in the Bunk Above Me*, and of course the inevitable full-audience singalong of *My Deskmate*.

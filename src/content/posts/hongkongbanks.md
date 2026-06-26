@@ -1,10 +1,13 @@
 ---
 title: "Opening a Hong Kong Bank Account in 2025: A Step-by-Step Guide"
-pubDate: 2025-02-24
-categories: ["Life"]
-tags: ["Hong Kong Bank Account", "Hong Kong Account Opening", "HSBC Hong Kong", "Bank of China Hong Kong"]
+pubDate: '2025-02-24'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![hkca2.jpg](https://i.190808.xyz/typecho/2025/02/24/hkca2.jpg)
 
 For years now, I've been holding some **cryptocurrency** and **US stocks**. Not a fortune, but with no convenient way to deposit or withdraw, the money just sat idle. Last year, I noticed more and more people heading to Hong Kong to open bank accounts, and HK bank cards happen to solve exactly this problem. So a trip to Hong Kong became urgent. But work got in the way, and it wasn't until after the 2025 Spring Festival that I finally had the time. During the waiting period, I watched Hong Kong stocks surge. So I gave this trip an even nobler mission: **open a Hong Kong bank account, buy Xiaomi!** Yes — Xiaomi's stock price was climbing a rung higher every day. As the only company on Earth that's all-in on clothing, food, housing, and transportation, it was valued at just 1 trillion HKD. Compared to US-listed companies, it was an absolute bargain!

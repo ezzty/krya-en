@@ -1,9 +1,13 @@
 ---
-title: "The Origin of 'Buying Books Like a Landslide'"
-pubDate: 2018-06-21
-categories: ["Life"]
+title: "The Origin of 'Buying Books Like a Landslide"
+pubDate: '2018-06-21'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 I used voice input to tally up how many books I've bought since college until now — finished the list in under 20 minutes. Although the bookshelf looks densely packed, there are actually fewer than 200 books, not even a grain of sand in the vast ocean of knowledge.
 
 I haven't participated much in JD.com's book sale events these past couple of years. I feel there are fewer and fewer books worth reading. Ultimately, the trouble lies in choosing — picking books I like one by one takes a lot of time, so I slowly add them to my cart and only pay when there's a promotion. A colleague asked me why I buy so many books. I said, "They're cheap! Works out to about ten yuan a book. Even if I don't finish reading them, they can be family heirlooms!"

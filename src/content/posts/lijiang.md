@@ -1,11 +1,11 @@
 ---
 title: "Journey to Western Yunnan: Lijiang"
-pubDate: 2012-10-14
+pubDate: '2012-10-14'
 author: jin
+draft: false
 categories:
   - Travel
 tags: []
-draft: false
 ---
 
 **D6: The Old Town**

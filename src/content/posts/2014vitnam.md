@@ -1,13 +1,15 @@
 ---
-title: 2014 Vietnam Travelogue
-pubDate: 2014-03-01
+title: "2014 Vietnam Travelogue"
+pubDate: '2014-03-01'
+author: jin
+draft: false
 categories:
   - Travel
 tags:
   - Saigon Travel
   - Da Nang Tourism
-draft: false
 ---
+
 I went traveling — to Vietnam, during the Spring Festival.
 
 The reason for going was simple: in order to have a passport ready so I could decide to go to Nepal — crossed off as item fourteen on my wish list — at any moment in the future, I went ahead and applied for one in advance (it took two trips back to my hometown county to finally get it done). After seeing what I'd done, Xiao Zhang also applied for a passport. Coincidentally, our passports became effective on the very same day. Like the impulse to rush into a scenic area the moment you've bought a ticket, she said, "Let's go to Vietnam," and I said, "Sure, it's not expensive anyway." Our fourteen-day Spring Festival holiday finally had a destination, and we'd also make up for missing Qinghai Lake during the National Day holiday.

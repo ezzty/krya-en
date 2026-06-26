@@ -1,11 +1,11 @@
 ---
 title: "Journey to Western Yunnan: Shangri-La — Deqin"
-pubDate: 2012-10-13
+pubDate: '2012-10-13'
 author: jin
+draft: false
 categories:
   - Travel
 tags: []
-draft: false
 ---
 
 **D1: Shangri-La**

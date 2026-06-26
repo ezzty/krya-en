@@ -1,10 +1,13 @@
 ---
 title: "Cheers!"
-pubDate: 2015-10-26
-categories: ["Life"]
-tags: ["Wedding"]
+pubDate: '2015-10-26'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 At the age of 26, the bewildering twists of life came in the form of a phone call. It was around 8:50 AM, and I was carefully backing into a parking spot downstairs at work, checking the rearview mirror from side to side. A college classmate I hadn't heard from in months called out of nowhere and got straight to the point: "Please come to my wedding this weekend at a hotel outside the Third Ring Road." My car was still creeping backward, getting closer and closer to the wall, the backup beeping growing more and more urgent — I was about to crash. My mind went blank. On a sweltering August morning, the car nearly hit the wall, a classmate suddenly announced his wedding, and I forgot to hit the brakes.
 
 "Shotgun weddings are our class's fine tradition — everyone should carry it on!" Zhang Erwa took a sip of baijiu, deliberately furrowing his brows toward the bridge of his nose like an old man in his seventies or eighties, as if he'd just had some profound revelation from the liquor. After a moment of brewing, he delivered this line with great relish, sending the whole table into fits of laughter. Shotgun weddings were indeed our class's "fine tradition." It's called "fine" because if the woman is already pregnant, the mother-in-law doesn't impose so many conditions and demands, making it easier for the man to propose. It's called a "tradition" because several newlywed classmates showed visibly pregnant bellies just a month or two after their weddings — anyone with eyes could tell.

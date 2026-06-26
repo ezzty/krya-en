@@ -1,10 +1,13 @@
 ---
 title: "A Technical Guide to Watching Netflix in China"
-pubDate: 2019-03-03
-categories: ["Technology"]
-tags: ["Watching Netflix in China", "Watching Netflix on TV", "Domestic Netflix", "Netflix at home"]
+pubDate: '2019-03-03'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![0240703211733.png](https://i.190808.xyz/typecho/2024/07/03/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240703211733.png)
 
 If you're too busy to read all this, here's the recommended solution for watching Netflix: **VPS + streaming media unlock + Apple TV**. It saves you headaches and delivers an excellent experience. If you want to save money, keep reading.

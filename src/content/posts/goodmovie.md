@@ -1,10 +1,13 @@
 ---
 title: "Movies and TV Shows Worth Watching"
-pubDate: 2016-07-16
-categories: ["Life"]
-tags: ["Television", "Movies", "Books"]
+pubDate: '2016-07-16'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 When sound films first emerged, Charlie Chaplin was quite resistant to the format. He believed that dialogue diluted the purity of cinematic entertainment, so he persisted in making his films funny through physical comedy alone. As the film industry evolved, however, even Chaplin eventually made several talkies, because relying solely on repetitive physical gags could no longer keep audiences satisfied. They craved deeper meaning — films that balanced entertainment with storytelling, that left you feeling something beyond just laughter.
 
 Below is a list of some of my all-time favorite movies and TV series.

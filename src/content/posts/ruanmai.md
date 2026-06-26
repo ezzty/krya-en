@@ -1,9 +1,11 @@
 ---
 title: "Reflections on Reading *Soft Burial*"
-pubDate: 2018-01-28
-categories: ["Lifestyle"]
-tags: ["Soft Burial", "Hu Daiyun"]
+pubDate: '2018-01-28'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
 
 Yesterday, I finished reading *Soft Burial* with a heavy heart, thinking I'd put it down and never bring it up again. But today, picking up Jiang Fangzhou's *A Year in Tokyo*, hoping to "retreat into my little building, caring not for winter or summer" as I had yesterday, I couldn't stop hearing Hu Daiyun's words echoing in my ears: "I don't want to be soft-buried! I don't want to be soft-buried!" Fine—I'll write down my thoughts to express my attitude toward the world.

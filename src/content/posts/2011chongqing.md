@@ -1,12 +1,13 @@
 ---
 title: "Rolex on the Liberation Monument — Chongqing"
-pubDate: 2011-09-06
+pubDate: '2011-09-06'
 author: jin
+draft: false
 categories:
   - Travel
 tags: []
-draft: false
 ---
+
 Originally I planned to visit Mount Hua, but since no one was going with me and I didn't feel comfortable going alone, I gave up the idea. Later, I went to Chongqing with Zhang Shaoxia. It was the end of August, scorching hot, with temperatures reaching a terrifying 41°C. Yet the furnace-like heat couldn't deter my determination to visit Chongqing.
 
 The bullet train from Chengdu to Chongqing costs 98 yuan, about 20 yuan more than the Chengdu-Chongqing express bus, but it offers much better value. Besides, I'm not worried about bullet train rear-end collisions—the probability of two such incidents happening within 30 days is tiny.

@@ -1,10 +1,13 @@
 ---
 title: "2018 Year in Review"
-pubDate: 2018-12-30
-categories: ["Life"]
-tags: ["2018 Year in Review"]
+pubDate: '2018-12-30'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 Since life hasn't undergone earth-shattering changes, I haven't written a year-end review in quite a few years. Its existence is necessarily a ritual — something worth commemorating.
 
 The few reviews I've written before were nothing more than summaries of what I'd done and what material things I'd acquired, never touching on lessons or wisdom. My family has no sages, no family philosophy, not even any worldly experience to pass down. Fortunately, this year I read a highly valuable bestselling book — *Principles* by Ray Dalio — which, for someone from my upbringing,恰好 fills those gaps.

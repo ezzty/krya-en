@@ -1,10 +1,13 @@
 ---
 title: "2025 Vietnam-Guangxi-Yunnan Road Trip"
-pubDate: 2025-10-26T17:09:02+08:00
-categories: ["Travel"]
-tags: ["Vietnam Fangchenggang Travel", "Guangxi Travel", "Xishuangbanna Travel"]
+pubDate: '2025-10-26T17:09:02+08:00'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![ddf-1.avif](https://user0102.cn.imgto.link/public/20260422/ddf-1.avif)
 
 August in Chengdu was blazing hot — the ground felt like it was warping from the heat, and being outdoors was no different from ascetic practice. So after my kid graduated from kindergarten, she was stuck at home all day. Whenever she was thoroughly bored, she'd always ask me: "Dad, what else can I play?"

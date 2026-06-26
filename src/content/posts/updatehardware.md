@@ -1,8 +1,8 @@
 ---
-title: Upgrading My Desktop Hardware
-description: The last time I bought a MacBook Pro was in 2014, spending 12,000 yuan. But due to work needs, it lacked many programs I required. After two years with little use, I gave it away. Recently I got into vibe coding and tried running qwen2.5vl:3b on a Windows PC with GTX 1650.
-pubDate: 2026-05-08
-heroImage: ""
+title: "Upgrading My Desktop Hardware"
+pubDate: '2026-05-08'
+author: jin
+draft: false
 categories:
   - Life
 tags:
@@ -10,6 +10,7 @@ tags:
   - apple
   - display
 ---
+
 ![](https://i.frc.cc/img/m/20260507/DSC06520.JPG)
 
 The last time I bought a MacBook Pro was in 2014. I was young and full of bravado, and I liked nice things — I dropped a hefty 12,000 yuan on it. But given my work environment, the Mac ecosystem lacked many programs I needed. After two years without recouping the cost, I gave it away.

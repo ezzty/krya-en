@@ -1,6 +1,6 @@
 ---
-title: How to deploy a static blog for free using Astro
-pubDate: 2026-04-20
+title: "How to deploy a static blog for free using Astro"
+pubDate: '2026-04-20'
 author: jin
 draft: false
 categories:
@@ -11,6 +11,7 @@ tags:
   - Typecho
   - Migration
 ---
+
 ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif)
 
 With dynamic blogs, I was always worried about forgetting to renew the server or running into issues during program upgrades. After discovering static blogs, I realized this was an ideal solution. After comparing Hugo, Hexo, and Astro, I ultimately chose Astro.

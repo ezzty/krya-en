@@ -1,12 +1,13 @@
 ---
-title: Hey, Teacher!
-pubDate: 2014-05-08
+title: "Hey, Teacher!"
+pubDate: '2014-05-08'
+author: jin
+draft: false
 categories:
   - Work
 tags:
   - Creator
   - lowb
-draft: false
 ---
 
 Chengdu seems to have this custom: anyone who knows a bit of technology can be called "Teacher" or "Master," or abbreviated as "X Shi." Our company used to have a designer surnamed Jiang, so naturally everyone called him "Jiang Shi," and with people saying "Jiang Shi" (sounding like "zombie") all day, I almost forgot his real name. Compared to him, I got lucky. Ever since the girl at the print shop on the fifth floor started calling me "Teacher," everyone else in the company seemed to have finally found the perfect catch-all term, and one by one they switched to calling me "Teacher" too. This sudden change caught me off guard—I hadn't even prepared any tipping money for the name change, let alone red envelopes.

@@ -1,13 +1,14 @@
 ---
-title: Family History
-pubDate: 2018-02-22
+title: "Family History"
+pubDate: '2018-02-22'
+author: jin
+draft: false
 categories:
   - Life
 tags:
   - Family History
-draft: false
-author: jin
 ---
+
 I once saw my maternal grandmother reading an old almanac, and I was astonished at the time. I had assumed that older women were all illiterate like my paternal grandmother. Later it became so routine that I took literacy for granted as her natural ability — I never even thought to ask why.
 
 During the 2018 Spring Festival, our family gathered at my grandmother's house for the reunion dinner. My grandfather mentioned that the old brass hot pot had been tricked out of the family by a villager for 200 yuan, who now used it as an antique display piece. This year, a newly purchased copper-plated hot pot would serve the guests. After all, the original one had been handcrafted by my great-grandfather. Everyone sighed with regret. It was then that I heard the elders share scattered fragments of our family's past. I remembered a childhood incident of eating at my great-grandfather's house with an extraordinarily heavy pair of silver chopsticks — it clearly had a story behind it. So I pieced together the family narrative, combining it with the historical context. Let me start with my grandmother's side — her stories are richer.

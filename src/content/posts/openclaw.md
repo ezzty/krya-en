@@ -1,10 +1,13 @@
 ---
 title: "What I've Done with OpenClaw"
-pubDate: 2026-03-09T13:47:44+08:00
-categories: ["Technology"]
-tags: ["OpenClaw practice", "OpenClaw installation", "OpenClaw skills"]
+pubDate: '2026-03-09T13:47:44+08:00'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![openclaw-banner.avif](https://user0102.cn.imgto.link/public/20260422/openclaw-banner.avif)
 
 As someone working in traditional B2C e-commerce, I'm neither a professional programmer nor do I have any coding background. Before this, my understanding of AI was limited to "smart speakers" and "phone voice assistants." But as a tech enthusiast, learning about the trending OpenClaw naturally made me want to give it a try.

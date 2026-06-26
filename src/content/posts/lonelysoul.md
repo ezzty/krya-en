@@ -1,10 +1,13 @@
 ---
 title: "A Lonely Soul"
-pubDate: 2019-05-04
-categories: ["Travel"]
-tags: ["Sancha Lake Travelogue", "Chengdu Sancha Lake"]
+pubDate: '2019-05-04'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 Yesterday my wife and I went to Sancha Lake to see the water. Around noon, we parked at the pier, grabbed some snacks, and boarded a free ferry. This boat shuttles residents between the two shores — a straight-line crossing of 1.2 kilometers. Without it, you'd have to drive over ten kilometers along the lakeside road to reach the opposite bank. Though Sancha Lake hasn't been developed as a tourist attraction, its vast waters draw scattered visitors, so this ferry doubles as a sightseeing boat. I didn't want to go to the other side — I just wanted to take my wife out onto the middle of the lake to take in the scenery.
 
 Not many people ride the ferry anyway, so it runs on a schedule. Right then, we were the only ones on board. The ferryman had probably gone home for lunch. We sat on the boat eating our snacks. I stood up, leaned against the railing, and tossed meat from a chicken leg into the lake to feed the fish. The marinade from the chicken sank underwater, then floated back up, spreading into a rainbow of iridescent oil slicks on the surface.

@@ -1,6 +1,8 @@
 ---
 title: "2024 Thailand Travelogue: Too Happy to Think of Home"
-pubDate: 2024-10-14
+pubDate: '2024-10-14'
+author: jin
+draft: false
 categories:
   - Travel
 tags:
@@ -10,7 +12,6 @@ tags:
   - BankokTravel
   - BankokAttractons
   - ThailandTravel
-draft: false
 ---
 
 I recently read a book by an American called *Die with Zero*, which basically argues that **life is an experience, and you should seize the right moments to experience things—even if conditions aren't ideal at the time, you should still try. Because if you wait until you're old and frail, you'll never feel it the way you did in your youth.** This echoes a line from a Song dynasty ci poem: **"I long to buy osmanthus blossoms,  And carry our wine, But it will never be like the carefree days of youth."** The meaning is the same. While we're young, we should make the most of our time and do what we want to do—don't wait until your hair turns white and mourn in vain!

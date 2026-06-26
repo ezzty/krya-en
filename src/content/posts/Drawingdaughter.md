@@ -1,9 +1,11 @@
 ---
 title: "A Drawing of my daughter"
-pubDate: 2024-07-19
-categories: ["Life"]
-tags: ["Children-Picture"]
+pubDate: '2024-07-19'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
 
 ![rain2.jpg](https://i.190808.xyz/typecho/2024/07/19/rain2.jpg?x-oss-process=style/826px)

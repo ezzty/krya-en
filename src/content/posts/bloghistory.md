@@ -1,10 +1,13 @@
 ---
 title: "Unofficial Blog History S01E01"
-pubDate: 2014-07-29
-categories: ["Life"]
-tags: ["Blog"]
+pubDate: '2014-07-29'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 This is the third time I've changed my domain name and blog title. The content hasn't diminished much, and my writing hasn't undergone any qualitative leap, so it hardly counts as a rebirth. The previous name, "Kong Shan Xin Yu" (New Words from the Empty Mountain), was probably inspired by the line "After fresh rain in the empty mountains" — I had just returned from Meili Snow Mountain in the autumn of 2012 and was still immersed in the ancient, tranquil atmosphere of that rain-dappled mountain valley. Combined with my desire to write something different and stand out ("biao xin li yi" — striking out on a new path), and perhaps hearing a Sun Yanzi song or remembering the book *A New Account of the Tales of the World* (*Shishuo Xinyu*), I came up with that name.
 
 Originally, my blog's slogan was "Recording life and convincing myself." Later I found a passage by Wang Xiaobo that expressed it far more profoundly. In the preface to *The Silent Majority*, he wrote:

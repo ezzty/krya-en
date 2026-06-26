@@ -1,12 +1,14 @@
 ---
 title: "Life Is Like a Journey"
-pubDate: 2015-08-08
+pubDate: '2015-08-08'
+author: jin
+draft: false
 categories:
   - Life
 tags:
   - Childhood Memories
-draft: false
 ---
+
 I must have been about five years old then. My hazy memories start from that time.
 
 My father hadn't yet traveled far for work, but my mother had already gone to Guangdong. Those were the peak years of the migrant labor wave — massive numbers of workers from central and western provinces were flowing to the southeastern coastal regions. When I was two, someone from my grandmother's village returned from Guangzhou and said it was easy to earn money out there. So she joined the same factory as her fellow villagers. To prevent my father from spending recklessly, her wages were sent to my grandmother for safekeeping. Back then, train travel wasn't nearly as convenient as it is now. The journey from our hometown to Guangdong started from Chongqing — you could either endure two days in a stuffy cargo train, or take a ship through the un-dammed Three Gorges of the Yangtze to Hubei, then transfer to a train. The journey was arduous, so migrant workers rarely came home. I hadn't seen my mother in three years, and seeing her again would take another two. Of course, at that age, I didn't know how long the wait would be — just that waiting was what I had to do.

@@ -1,6 +1,6 @@
 ---
-title: A Road Trip from Chengdu to Qinghai Lake
-pubDate: 2017-10-08
+title: "A Road Trip from Chengdu to Qinghai Lake"
+pubDate: '2017-10-08'
 author: jin
 draft: false
 categories:

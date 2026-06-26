@@ -1,10 +1,13 @@
 ---
 title: "Buendía"
-pubDate: 2019-12-04
-categories: ["Life"]
-tags: ["Family Atmosphere", "Character Development"]
+pubDate: '2019-12-04'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![0518-bks-RUSHDIE-videoSixteenByNine1050.jpg](https://i.190808.xyz/typecho/2020/03/20/0518-bks-RUSHDIE-videoSixteenByNine1050.jpg)
 
 > Caption: Buendía is the name of a family in Gabriel García Márquez's famous novel *One Hundred Years of Solitude*. Every member of this family lives in their own world, caring only about the things that matter to them.

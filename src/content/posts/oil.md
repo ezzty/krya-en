@@ -1,10 +1,13 @@
 ---
 title: "Cooking Oil Selection Guide"
-pubDate: 2024-11-24
-categories: ["Lifestyle"]
-tags: ["mineral oil", "cooking oil contamination"]
+pubDate: '2024-11-24'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![ddaaf.jpg|87](https://i.190808.xyz/typecho/2024/11/24/ddaaf.jpg)
 
 When choosing a healthy cooking oil, the main factors to consider are: **aflatoxins**, **erucic acid**, **whether it's genetically modified**, **unsaturated fatty acids**, and **cooking temperature**. Recently, prompted by the news about industrial oil tanker trucks being used to transport edible oil, we also need to consider the potential risk of **mineral oil contamination**. Beyond these six health factors, we also need to consider whether the **price** is reasonable.

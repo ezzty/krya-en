@@ -1,10 +1,13 @@
 ---
 title: "Spring Break Road Trip to Luoyang"
-pubDate: 2026-04-08
-categories: ["Travel"]
-tags: ["Henan Tourism", "Luoyang Tourism", "Xuchang Pangdonglai", "Xiangyang Ancient City"]
+pubDate: '2026-04-08'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 My kid got six days off for spring break, but I couldn't snag any high-speed rail tickets, so we drove instead. I picked up the kid from school on Friday and headed north. Our route took us through Hanzhong, Xi'an, and Luoyang. Then we figured — since we were already in Henan, why not swing by Xuchang to check out Pangdonglai? On the way back to Chengdu, we passed through Xiangyang and Ankang. The entire trip covered roughly 2,500 kilometers.
 
 Road trips have just one real advantage over train travel: freedom. Stop wherever you want. On day two, driving from Hanzhong to Luoyang, we spotted the Terracotta Warriors right off the highway. A quick right turn, a few extra kilometers, and we were off the expressway visiting the Mausoleum of the First Qin Emperor. At Sanmenxia, we stopped by the Yellow River for some photos. After visiting the White Horse Temple in Luoyang, my wife and kid were too sun-exhausted to move, so we cancelled the Shaolin Temple plan on the spot and headed straight to Xuchang to experience Pangdonglai. On the way home, we stumbled upon Xiangyang Ancient City and thought it looked great, so we stayed an extra day and flew Kongming lanterns by the ancient city wall at night.

@@ -1,10 +1,13 @@
 ---
 title: "Why I'm Buying Xiaomi Stock: A Power User's Choice"
-pubDate: 2026-03-17T21:27:40+08:00
-categories: ["Life"]
-tags: ["Xiaomi stock", "New Xiaomi SU7", "Xiaomi's development"]
+pubDate: '2026-03-17T21:27:40+08:00'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![wj-2.avif](https://user0102.cn.imgto.link/public/20260422/wj-2.avif)
 
 In February 2025, I opened a bank and stock account in Hong Kong and started buying Xiaomi shares. Since then, I've accumulated several thousand shares and plan to gradually add to my position, aiming for 10,000 shares over time.

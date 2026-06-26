@@ -1,10 +1,13 @@
 ---
 title: "Let's Disappear from the Internet"
-pubDate: 2019-10-21
-categories: ["Life"]
-tags: ["Cybersecurity", "Website Anonymity", "Hiding Personal Information"]
+pubDate: '2019-10-21'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 ![edwardsnowden_onuitwisbaar_balans.png](https://i.190808.xyz/typecho/2020/03/22/edwardsnowden_onuitwisbaar_balans.png)
 
 > 📷 Image caption: Edward Snowden, wanted by the U.S. since 2013 for exposing the "PRISM" program — a project involving deep surveillance of Americans' real-time communications and stored data — to the media.

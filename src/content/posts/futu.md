@@ -1,8 +1,8 @@
 ---
 title: "Cross-Border Stock Trading Gets Hammered—I’m Left to Tough It Out"
-description: Hong Kong local banks for buying stocks are completely unaffected. This policy didn’t impose any restrictions on purchasing stocks through bank channels. For example, HSBC’s Trade25: pay a monthly fee of 25 HKD and you get 250,000 HKD in free trading quota.
-pubDate: 2026-05-23T22:20:00+08:00
-heroImage: ""
+pubDate: '2026-05-23T22:20:00+08:00'
+author: jin
+draft: false
 categories:
   - Life
 tags:
@@ -10,8 +10,8 @@ tags:
   - Hong Kong Stock Account Opening
   - Investment Pitfalls
   - Interactive Brokers
-author: jin
 ---
+
 ![image](https://i.190808.xyz/img/m/20260608/4da365.png)
 
 In 2020 I opened a Tiger Brokers account; at the same time I also opened a U.S. account with East West Bank, but the maintenance costs on that bank account were too high, so I eventually closed it.

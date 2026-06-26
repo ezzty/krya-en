@@ -1,10 +1,13 @@
 ---
 title: "Xi'an"
-pubDate: 2015-03-28
-categories: ["Travel"]
-tags: ["Xi'an", "Guangwu Mountain, Bazhong"]
+pubDate: '2015-03-28'
+author: jin
 draft: false
+categories:
+  - Life
+tags: []
 ---
+
 Geographically, the Qinling Mountains–Huai River line is considered China's north-south dividing line!
 
 A colleague came back from Inner Mongolia, bragging about eating lamb on the steppe. Another returned from Shanxi, describing the enormous snow there. Then it occurred to me that the northernmost place I've ever been is Mianyang. I ground my teeth, frustration welling up in my chest.
