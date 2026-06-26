@@ -137,8 +137,20 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     margin: 60px 0 40px;
     text-align: center;
   }
-  
-    .page-link {
+
+  .page-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 8px;
+  }
+
+  .page-item {
+    display: inline-block;
+  }
+
+  .page-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
