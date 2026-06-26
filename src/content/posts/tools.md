@@ -1,5 +1,5 @@
 ---
-title: "With AI, I Never Worry About Leaving the Door Open Again"
+title: With AI, I Never Worry About Leaving the Door Open Again
 pubDate: '2026-04-29'
 author: jin
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Got the Sesame, Lost the Watermelon"
+title: Got the Sesame, Lost the Watermelon
 pubDate: '2015-01-13'
 author: jin
 draft: false

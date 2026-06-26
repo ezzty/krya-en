@@ -1,5 +1,5 @@
 ---
-title: "Hey, Teacher!"
+title: Hey, Teacher!
 pubDate: '2014-05-08'
 author: jin
 draft: false
