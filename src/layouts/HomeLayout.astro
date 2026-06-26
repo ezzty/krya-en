@@ -138,19 +138,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     text-align: center;
   }
   
-  .page-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-flex;
-    gap: 8px;
-  }
-  
-  .page-item {
-    display: inline-block;
-  }
-  
-  .page-link {
+    .page-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -162,49 +150,43 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     text-align: center;
     padding: 0;
   }
-  }
-  
+
   /* Light mode */
   .page-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    text-align: center;
-    padding: 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    color: #333;
   }
-  
+
+  .page-link:hover {
+    background-color: #e8e8e8;
+    border-color: #ccc;
+  }
+
   .page-link.active {
     background-color: #007bff;
     border-color: #007bff;
     color: #fff;
     font-weight: bold;
   }
-  
+
   /* Dark mode */
-  .page-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    text-align: center;
-    padding: 0;
+  html[data-theme="dark"] .page-link {
+    background-color: #303030;
+    border: 1px solid #3d3d3d;
+    color: #999;
   }
-  
+
+  html[data-theme="dark"] .page-link:hover {
+    background-color: #404040;
+    border-color: #555;
+  }
+
   html[data-theme="dark"] .page-link.active {
     background-color: #505050;
     border-color: #4e4e4e;
     color: #fff;
     font-weight: 700;
   }
-  
 
 </style>
