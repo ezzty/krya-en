@@ -1,5 +1,5 @@
 ---
-title: Journey to Western Yunnan: Shangri-La — Deqin
+title: "Journey to Western Yunnan: Shangri-La — Deqin"
 pubDate: 2012-10-13
 author: jin
 categories:

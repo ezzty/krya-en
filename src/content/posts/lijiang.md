@@ -1,5 +1,5 @@
 ---
-title: Journey to Western Yunnan: Lijiang
+title: "Journey to Western Yunnan: Lijiang"
 pubDate: 2012-10-14
 author: jin
 categories:

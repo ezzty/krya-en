@@ -1,5 +1,5 @@
 ---
-title: Cross-Border Stock Trading Gets Hammered — I'll Ride It Out
+title: "Cross-Border Stock Trading Gets Hammered — I'll Ride It Out"
 description: Buying stocks through Hong Kong local banks is completely unaffected. This policy doesn't restrict stock purchases through banking channels. Take HSBC's Trade25, for example: pay a HK$25 monthly fee and you get HK$250,000 in commission-free trading.
 pubDate: 2026-05-23T22:20:00+08:00
 heroImage: ""

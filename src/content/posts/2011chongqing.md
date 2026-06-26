@@ -1,5 +1,5 @@
 ---
-title: Rolex on the Liberation Monument — Chongqing
+title: "Rolex on the Liberation Monument — Chongqing"
 pubDate: 2011-09-06
 author: jin
 categories:
