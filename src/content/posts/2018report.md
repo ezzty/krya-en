@@ -1,5 +1,5 @@
 ---
-title: "2018 Year in Review"
+title: 2018 Year in Review
 pubDate: '2018-12-30'
 author: jin
 draft: false

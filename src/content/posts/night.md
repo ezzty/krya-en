@@ -1,5 +1,5 @@
 ---
-title: "Night"
+title: Night
 pubDate: '2016-08-24'
 author: jin
 draft: false

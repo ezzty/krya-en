@@ -1,5 +1,5 @@
 ---
-title: "How to deploy a static blog for free using Astro"
+title: How to deploy a static blog for free using Astro
 pubDate: '2026-04-20'
 author: jin
 draft: false

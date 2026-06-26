@@ -1,5 +1,5 @@
 ---
-title: "Never Make Decisions When Angry"
+title: Never Make Decisions When Angry
 pubDate: '2016-01-19'
 author: jin
 draft: false

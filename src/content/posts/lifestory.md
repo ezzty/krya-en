@@ -1,5 +1,5 @@
 ---
-title: "Life Is Like a Journey"
+title: Life Is Like a Journey
 pubDate: '2015-08-08'
 author: jin
 draft: false

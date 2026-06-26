@@ -1,5 +1,5 @@
 ---
-title: "How to Register a Stripe Personal Account"
+title: How to Register a Stripe Personal Account
 pubDate: '2025-10-29'
 author: jin
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Brief Notes on Xichang"
+title: Brief Notes on Xichang
 pubDate: '2011-10-06'
 author: jin
 draft: false

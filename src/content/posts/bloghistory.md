@@ -1,5 +1,5 @@
 ---
-title: "Unofficial Blog History S01E01"
+title: Unofficial Blog History S01E01
 pubDate: '2014-07-29'
 author: jin
 draft: false

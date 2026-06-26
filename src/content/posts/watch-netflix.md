@@ -1,5 +1,5 @@
 ---
-title: "A Technical Guide to Watching Netflix in China"
+title: A Technical Guide to Watching Netflix in China
 pubDate: '2019-03-03'
 author: jin
 draft: false

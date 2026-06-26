@@ -1,5 +1,5 @@
 ---
-title: "Making Money on the Internet"
+title: Making Money on the Internet
 pubDate: '2024-07-03'
 author: jin
 draft: false

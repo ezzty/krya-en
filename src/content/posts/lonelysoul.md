@@ -1,5 +1,5 @@
 ---
-title: "A Lonely Soul"
+title: A Lonely Soul
 pubDate: '2019-05-04'
 author: jin
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Learning Shuangpin Input Method"
+title: Learning Shuangpin Input Method
 pubDate: '2019-06-13'
 author: jin
 draft: false

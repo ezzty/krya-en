@@ -1,5 +1,5 @@
 ---
-title: "A Drawing of my daughter"
+title: A Drawing of my daughter
 pubDate: '2024-07-19'
 author: jin
 draft: false

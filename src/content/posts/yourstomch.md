@@ -1,5 +1,5 @@
 ---
-title: "That Poor Kid Still Lives in Your Stomach"
+title: That Poor Kid Still Lives in Your Stomach
 pubDate: '2026-04-01T07:29:33+08:00'
 author: jin
 draft: false

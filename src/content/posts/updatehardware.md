@@ -1,5 +1,5 @@
 ---
-title: "Upgrading My Desktop Hardware"
+title: Upgrading My Desktop Hardware
 pubDate: '2026-05-08'
 author: jin
 draft: false

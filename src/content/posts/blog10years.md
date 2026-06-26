@@ -1,5 +1,5 @@
 ---
-title: "Ten Years of Blogging"
+title: Ten Years of Blogging
 pubDate: '2018-08-21'
 author: jin
 draft: false

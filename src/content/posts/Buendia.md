@@ -1,5 +1,5 @@
 ---
-title: "Buendía"
+title: Buendía
 pubDate: '2019-12-04'
 author: jin
 draft: false

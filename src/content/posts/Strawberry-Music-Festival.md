@@ -1,5 +1,5 @@
 ---
-title: "2014 Strawberry Music Festival (Chengdu) Live"
+title: 2014 Strawberry Music Festival (Chengdu) Live
 pubDate: '2014-06-02'
 author: jin
 draft: false

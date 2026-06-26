@@ -1,5 +1,5 @@
 ---
-title: "2014 Vietnam Travelogue"
+title: 2014 Vietnam Travelogue
 pubDate: '2014-03-01'
 author: jin
 draft: false

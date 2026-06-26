@@ -1,5 +1,5 @@
 ---
-title: "Reflections on Reading *Soft Burial*"
+title: Reflections on Reading *Soft Burial*
 pubDate: '2018-01-28'
 author: jin
 draft: false

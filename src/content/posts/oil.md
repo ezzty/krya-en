@@ -1,5 +1,5 @@
 ---
-title: "Cooking Oil Selection Guide"
+title: Cooking Oil Selection Guide
 pubDate: '2024-11-24'
 author: jin
 draft: false

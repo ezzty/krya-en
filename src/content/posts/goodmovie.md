@@ -1,5 +1,5 @@
 ---
-title: "Movies and TV Shows Worth Watching"
+title: Movies and TV Shows Worth Watching
 pubDate: '2016-07-16'
 author: jin
 draft: false

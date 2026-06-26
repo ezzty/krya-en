@@ -1,5 +1,5 @@
 ---
-title: "Spring Break Road Trip to Luoyang"
+title: Spring Break Road Trip to Luoyang
 pubDate: '2026-04-08'
 author: jin
 draft: false

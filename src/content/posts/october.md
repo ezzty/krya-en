@@ -1,5 +1,5 @@
 ---
-title: "Thoughts in October"
+title: Thoughts in October
 pubDate: '2014-10-14'
 author: jin
 draft: false

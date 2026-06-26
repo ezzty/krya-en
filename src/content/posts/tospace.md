@@ -1,5 +1,5 @@
 ---
-title: "Can Humanity Achieve Interstellar Travel?"
+title: Can Humanity Achieve Interstellar Travel?
 pubDate: '2015-05-30'
 author: jin
 draft: false
