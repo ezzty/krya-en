@@ -151,27 +151,31 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
   }
   
   .page-link {
-    display: inline-block;
-    padding: 10px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     border-radius: 4px;
     text-decoration: none;
     transition: all 0.2s ease;
     text-align: center;
-    line-height: 20px;
+    padding: 0;
+  }
   }
   
   /* Light mode */
   .page-link {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    color: #333;
-  }
-  
-  .page-link:hover {
-    background-color: #e8e8e8;
-    border-color: #ccc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+    padding: 0;
   }
   
   .page-link.active {
@@ -182,15 +186,17 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
   }
   
   /* Dark mode */
-  html[data-theme="dark"] .page-link {
-    background-color: #303030;
-    border: 1px solid #3d3d3d;
-    color: #999;
-  }
-  
-  html[data-theme="dark"] .page-link:hover {
-    background-color: #434343;
-    border-color: #3a3a3a;
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+    padding: 0;
   }
   
   html[data-theme="dark"] .page-link.active {
