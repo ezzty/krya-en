@@ -5,7 +5,10 @@ author: jin
 draft: false
 categories:
   - Travel
-tags: []
+tags:
+  - Travel
+  - Shangri-La
+  - Western Yunnan
 ---
 
 **D1: Shangri-La**

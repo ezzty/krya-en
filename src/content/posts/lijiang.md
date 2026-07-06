@@ -5,7 +5,9 @@ author: jin
 draft: false
 categories:
   - Travel
-tags: []
+tags:
+  - Lijiang
+  - Lijiang
 ---
 
 **D6: The Old Town**

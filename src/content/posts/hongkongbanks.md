@@ -4,8 +4,12 @@ pubDate: '2025-02-24'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Finance
+tags:
+  - HK Bank Account
+  - HK Account Opening
+  - HSBC HK Account
+  - BOC HK Account
 ---
 
 ![hkca2.jpg](https://i.190808.xyz/typecho/2025/02/24/hkca2.jpg)

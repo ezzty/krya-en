@@ -4,12 +4,11 @@ pubDate: '2026-04-20'
 author: jin
 draft: false
 categories:
-  - Technology
+  - Tech
 tags:
   - Blog
   - Astro
   - Typecho
-  - Migration
 ---
 
 ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif)

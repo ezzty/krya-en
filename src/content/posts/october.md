@@ -5,7 +5,8 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Future
 ---
 
 Cold rain arrived, and Chengdu's temperature dropped significantly. Combined with my reckless mixing of baijiu and beer, I caught a cold. I was watching *The Truman Show* on TV and blowing my nose when my mom threw a pair of fuzzy slippers at my feet and told me to put them on. Winter was here! Whenever she rummaged through the closet for fuzzy slippers, you didn't need a weather forecast to know that meteorological winter had arrived. But wearing the fuzzy slippers somehow made it feel even colder. A chill ran across my shoulders, so I went to the room and put on socks — suddenly warm as spring.

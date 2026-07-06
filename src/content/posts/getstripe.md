@@ -4,8 +4,11 @@ pubDate: '2025-10-29'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Finance
+tags:
+  - Stripe HK
+  - Stripe Registration
+  - Stripe Payments
 ---
 
 ![homepage.avif](https://user0102.cn.imgto.link/public/20260422/homepage.avif)

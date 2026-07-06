@@ -1,11 +1,14 @@
 ---
 title: 2025 Vietnam-Guangxi-Yunnan Road Trip
-pubDate: '2025-10-26T17:09:02+08:00'
+pubDate: '2025-10-26'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Travel
+tags:
+  - Vietnam Fangchenggang Travel
+  - Guangxi Travel
+  - Xishuangbanna Travel
 ---
 
 ![ddf-1.avif](https://user0102.cn.imgto.link/public/20260422/ddf-1.avif)

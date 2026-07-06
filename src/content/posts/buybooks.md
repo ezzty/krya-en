@@ -4,7 +4,7 @@ pubDate: '2018-06-21'
 author: jin
 draft: false
 categories:
-  - Life
+  - Reading
 tags: []
 ---
 

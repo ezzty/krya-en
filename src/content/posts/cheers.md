@@ -5,7 +5,8 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - 婚礼
 ---
 
 At the age of 26, the bewildering twists of life came in the form of a phone call. It was around 8:50 AM, and I was carefully backing into a parking spot downstairs at work, checking the rearview mirror from side to side. A college classmate I hadn't heard from in months called out of nowhere and got straight to the point: "Please come to my wedding this weekend at a hotel outside the Third Ring Road." My car was still creeping backward, getting closer and closer to the wall, the backup beeping growing more and more urgent — I was about to crash. My mind went blank. On a sweltering August morning, the car nearly hit the wall, a classmate suddenly announced his wedding, and I forgot to hit the brakes.

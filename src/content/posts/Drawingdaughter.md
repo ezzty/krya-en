@@ -5,7 +5,8 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Children's Pictures
 ---
 
 ![rain2.jpg](https://i.190808.xyz/typecho/2024/07/19/rain2.jpg?x-oss-process=style/826px)

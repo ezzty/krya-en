@@ -1,17 +1,30 @@
 ---
-title: Upgrading My Desktop Hardware
+title: "Upgrading My Desktop Hardware"
 pubDate: '2026-05-08'
 author: jin
 draft: false
 categories:
-  - Life
+  - Tech
 tags:
-  - macmini
-  - apple
-  - display
+  - Mac Mini
+  - Apple Computer
+  - Apple Display
 ---
 
-![](https://i.frc.cc/img/m/20260507/DSC06520.JPG)
+![image](https://i.190808.xyz/img/m/20260608/38b03e.jpg)
+
+Thanks to the AI wave, I ended up buying a bunch of things in just the past two months. Here's a rundown.
+
+| # | Product | New/Used | Reason | Price |
+| :---: | :--- | :---: | :--- | ---: |
+| 1 | Mac mini M4 base model | Used | New purchase | 3,600 |
+| 2 | Redmi A27U monitor | Used | Old 24-inch had blurry text | 800 |
+| 3 | DJI Pocket 4 handheld camera | New | Better image quality | 3,000 |
+| 4 | DJI Mic Mini 2 microphone | New | Excellent noise cancellation | 430 |
+| 5 | iPhone 15 Pro original battery | New | Squeeze out another 2.5 years | 800 |
+| 6 | Apple Watch 11 | New | Battery replacement | 2,780 |
+| 7 | iPhone SE3 US version | Used | eSIM need | 980 |
+| | **Total** | | | **¥12,390** |
 
 The last time I bought a MacBook Pro was in 2014. I was young and full of bravado, and I liked nice things — I dropped a hefty 12,000 yuan on it. But given my work environment, the Mac ecosystem lacked many programs I needed. After two years without recouping the cost, I gave it away.
 

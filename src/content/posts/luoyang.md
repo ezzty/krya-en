@@ -4,8 +4,12 @@ pubDate: '2026-04-08'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Travel
+tags:
+  - Henan Travel
+  - Luoyang Travel
+  - Xuchang Pang Donglai
+  - Xiangyang Ancient City
 ---
 
 My kid got six days off for spring break, but I couldn't snag any high-speed rail tickets, so we drove instead. I picked up the kid from school on Friday and headed north. Our route took us through Hanzhong, Xi'an, and Luoyang. Then we figured — since we were already in Henan, why not swing by Xuchang to check out Pangdonglai? On the way back to Chengdu, we passed through Xiangyang and Ankang. The entire trip covered roughly 2,500 kilometers.

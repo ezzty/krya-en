@@ -5,7 +5,8 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Blog
 ---
 
 This is the third time I've changed my domain name and blog title. The content hasn't diminished much, and my writing hasn't undergone any qualitative leap, so it hardly counts as a rebirth. The previous name, "Kong Shan Xin Yu" (New Words from the Empty Mountain), was probably inspired by the line "After fresh rain in the empty mountains" — I had just returned from Meili Snow Mountain in the autumn of 2012 and was still immersed in the ancient, tranquil atmosphere of that rain-dappled mountain valley. Combined with my desire to write something different and stand out ("biao xin li yi" — striking out on a new path), and perhaps hearing a Sun Yanzi song or remembering the book *A New Account of the Tales of the World* (*Shishuo Xinyu*), I came up with that name.

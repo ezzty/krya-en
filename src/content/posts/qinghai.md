@@ -8,7 +8,6 @@ categories:
 tags:
   - Qinghai Lake
   - Chengdu to Qinghai Lake
-  - Lanzhou Food
 ---
 
 ![Please enter image description](https://i.190808.xyz/bim2019/10/09/791042534938310.jpg)

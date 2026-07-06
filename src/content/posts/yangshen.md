@@ -5,7 +5,10 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Yang Shen Tomb
+  - Yang Shengan Tomb
+  - Xindu Yang Tinghe Tomb
 ---
 
 During July and August, I used my time commuting on buses, riding elevators, and even sitting on the toilet to finish all seven volumes of *Those Things About the Ming Dynasty*. One day, while browsing a forum, I saw that people were still visiting Zhang Juzheng's tomb, and another user had posted a list of surviving tombs of high-ranking Ming officials. A quick check revealed that Yang Shen's tomb was right here in Xindu District — barely ten kilometers away. I decided on the spot to go visit.

@@ -1,11 +1,14 @@
 ---
 title: "What I've Done with OpenClaw"
-pubDate: '2026-03-09T13:47:44+08:00'
+pubDate: '2026-03-09'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Tech
+tags:
+  - OpenClaw Practice
+  - OpenClaw Install
+  - OpenClaw Skills
 ---
 
 ![openclaw-banner.avif](https://user0102.cn.imgto.link/public/20260422/openclaw-banner.avif)

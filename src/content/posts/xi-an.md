@@ -4,8 +4,10 @@ pubDate: '2015-03-28'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Travel
+tags:
+  - 西安
+  - Bazhong Guangwu Mountain
 ---
 
 Geographically, the Qinling Mountains–Huai River line is considered China's north-south dividing line!

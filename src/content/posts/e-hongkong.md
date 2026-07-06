@@ -4,8 +4,10 @@ pubDate: '2025-03-01'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Travel
+tags:
+  - Victoria Harbour
+  - Hong Kong
 ---
 
 Why do I say Hong Kong is my electronic hometown? Because over the years, I've always maintained several Hong Kong VPS servers: hosting websites, blogs, and internet access. My phone even has a Hong Kong SIM card. Last year, my investments weren't doing well, and I felt I needed better wealth management methods, so I started researching asset allocation — Hong Kong stocks, US stocks, BTC, and so on. But no matter what method you choose, the first step in every tutorial is to go to Hong Kong to open a bank account. So, I took my wife and kids to Hong Kong during the Spring Festival holiday to open a bank account, and visited Disneyland and Ocean Park along the way.

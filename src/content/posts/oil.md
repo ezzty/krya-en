@@ -5,7 +5,9 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Oil Minerals
+  - Oil Contamination
 ---
 
 ![ddaaf.jpg|87](https://i.190808.xyz/typecho/2024/11/24/ddaaf.jpg)

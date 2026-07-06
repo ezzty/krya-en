@@ -4,8 +4,9 @@ pubDate: '2016-01-19'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Work
+tags:
+  - Decisions in Anger
 ---
 
 The period before the New Year is peak season for liquor sales, and every packaging supplier's production schedule is stretched to the limit. Yesterday, one supplier delayed a batch of bottle labels that should have been delivered to us by one day. My boss tore into me over the phone, warning that if the distributor refused the goods, I'd be held jointly liable and would have to compensate the company out of my own pocket. This wasn't the first time he'd said something like this. At the end of 2014, he unilaterally changed the 400-number on a batch of distributor-customized products to the company's number. The distributor didn't notice the change during text review and approved printing. When the goods were delivered, the distributor was furious. My boss called me and demanded I pay for it. Fortunately, to guard against sleazy behavior, I'd been recording all my calls for the entire year and regularly backing them up to Dropbox. Hearing the baseless accusation, I told him not to judge me so rashly — let me check the archives first. An hour later, I sent both him and the distributor a phone recording and message log from when the distributor confirmed the production, which completely shut them up. After that incident, I gained a clear understanding of our boss's character: he's the kind of selfish person who, when things get urgent, doesn't bother figuring out what happened, washes his hands of his own responsibility, and dumps everything on someone else.

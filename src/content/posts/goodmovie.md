@@ -5,7 +5,10 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - TV
+  - Movies
+  - 书籍
 ---
 
 When sound films first emerged, Charlie Chaplin was quite resistant to the format. He believed that dialogue diluted the purity of cinematic entertainment, so he persisted in making his films funny through physical comedy alone. As the film industry evolved, however, even Chaplin eventually made several talkies, because relying solely on repetitive physical gags could no longer keep audiences satisfied. They craved deeper meaning — films that balanced entertainment with storytelling, that left you feeling something beyond just laughter.

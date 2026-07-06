@@ -6,7 +6,7 @@ draft: false
 categories:
   - Life
 tags:
-  - Sketch
+  - Sketching
 ---
 
 It was a night at the end of summer, after watching two episodes of the TV adaptation of *The Girl Who Leapt Through Time*. I leaned against the windowsill, stepped out onto the balcony, and let the breeze hit me.

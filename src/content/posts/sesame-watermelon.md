@@ -5,7 +5,8 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Wage Dispute Story
 ---
 
 One Monday evening, while I was washing dishes and my mind was wandering, I suddenly remembered a bizarre text message a client had sent the evening before: "Got the sesame, no watermelon." Without much thought, I texted back: "Lao Huang, what does your message mean?" The reply vanished like a stone in the ocean, and I didn't think much of it. It wasn't until today that it suddenly clicked—Lao Huang was saying I'd "picked up the sesame seeds and lost the watermelon."

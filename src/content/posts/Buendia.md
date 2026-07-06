@@ -5,7 +5,9 @@ author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - 家庭氛围
+  - Character Building
 ---
 
 ![0518-bks-RUSHDIE-videoSixteenByNine1050.jpg](https://i.190808.xyz/typecho/2020/03/20/0518-bks-RUSHDIE-videoSixteenByNine1050.jpg)

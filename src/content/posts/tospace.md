@@ -4,8 +4,11 @@ pubDate: '2015-05-30'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Tech
+tags:
+  - Leaving the Solar System
+  - Fastest Human Speed
+  - Interstellar Flight
 ---
 
 I've watched *Interstellar* three times over and over again. The entire film's theoretical framework is built on relativity and wormhole theory. Fascinating as it is, I still feel that the level of technology depicted in the movie (and in real-world society) is hopelessly inadequate. Without the wormhole placed near Saturn by future humans, there's virtually no chance for humanity to fly out of the solar system with our current technological capabilities.

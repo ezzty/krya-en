@@ -4,8 +4,9 @@ pubDate: '2018-07-01'
 author: jin
 draft: false
 categories:
-  - Life
-tags: []
+  - Reading
+tags:
+  - Ray Dalio Principles
 ---
 
 *Principles* is neither a success manual nor a sales bible—it's a collection of life lessons that hedge fund godfather Ray Dalio distilled during his time at Bridgewater Associates. The following are my own summarized methods and analysis, not direct quotes from the original text.

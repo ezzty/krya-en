@@ -1,13 +1,13 @@
 ---
 title: "Cross-Border Stock Trading Gets Hammered—I’m Left to Tough It Out"
-pubDate: '2026-05-23T22:20:00+08:00'
+pubDate: '2026-05-23'
 author: jin
 draft: false
 categories:
-  - Life
+  - Finance
 tags:
-  - Cross-Border Investing
-  - Hong Kong Stock Account Opening
+  - Cross-Border Finance
+  - HK Stock Account
   - Investment Pitfalls
   - Interactive Brokers
 ---

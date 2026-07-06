@@ -5,7 +5,10 @@ author: jin
 draft: false
 categories:
   - Travel
-tags: []
+tags:
+  - Travel
+  - Xichang
+  - Qionghai Lake
 ---
 
 My cousin is also someone with too much time on his hands—every last day of the month he starts spreading greetings and blessings everywhere. The day before National Day holiday, he called and said he was in Xichang because my uncle had invested in a project there, so he was sent down here to help with some work—at least better than playing *Tian Long Ba Bu* at home every day. When I was hesitating where to go for National Day, this news came at just the right time. There's nothing more enjoyable than going out to wander and not having to pay for accommodation or food.

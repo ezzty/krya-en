@@ -1,11 +1,13 @@
 ---
 title: How to Get Delivery Drivers to Bring Packages to Your Door
-pubDate: '2025-12-05T11:14:29+08:00'
+pubDate: '2025-12-05'
 author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Home Delivery
+  - Delivery to Station
 ---
 
 Last year, the newly revised *Express Delivery Market Management Measures* officially took effect. Among its provisions, the rule that "packages must not be sent to lockers or pickup stations without user consent" sparked widespread discussion.

@@ -1,11 +1,12 @@
 ---
 title: That Poor Kid Still Lives in Your Stomach
-pubDate: '2026-04-01T07:29:33+08:00'
+pubDate: '2026-04-01'
 author: jin
 draft: false
 categories:
   - Life
-tags: []
+tags:
+  - Poor Kid
 ---
 
 ![ms-1.avif](https://user0102.cn.imgto.link/public/20260422/ms-1.avif)

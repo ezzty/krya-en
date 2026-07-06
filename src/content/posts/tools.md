@@ -9,7 +9,6 @@ tags:
   - AI
   - Home Assistant
   - Smart Home
-  - Tools
 ---
 
 You're out and about, and suddenly you think — did I forget to close the door?
@@ -36,7 +35,7 @@ I only did one thing: provided the Alibaba Cloud OSS API credentials.
 
 The rest was handled by the AI.
 
-恰好 Xiaomi was offering billions of free tokens to developers, and I managed to get some. This was also a chance to test the MiMo-v2.5-pro model. Within minutes of giving the instruction, it had built both frontend and backend code, and asked me to upload the backend to the server. After a few rounds of debugging, the OSS image upload page was ready.
+Coincidentally, Xiaomi was offering billions of free tokens to developers, and I managed to get some. This was also a chance to test the MiMo-v2.5-pro model. Within minutes of giving the instruction, it had built both frontend and backend code, and asked me to upload the backend to the server. After a few rounds of debugging, the OSS image upload page was ready.
 
 Once the page was live, I felt it was too plain. Could I make it more feature-rich?
 
