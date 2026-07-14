@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
 import { getCollection } from 'astro:content';
-import { formatDate } from '../lib/utils';
+import { formatDate, withTrailingSlash} from '../lib/utils';
 
 const posts = (await getCollection('posts')).filter(post => !post.data.draft);
 
@@ -38,7 +38,7 @@ posts.sort((a, b) => {
               {posts.map((post) => (
                 <li>
                   <span class="archive-date">{formatDate(post.data.pubDate.toISOString())}</span>
-                  <a href={`/post/${post.id.replace(/\.[^.]+$/, '')}`}>{post.data.title}</a>
+                  <a href={withTrailingSlash(`/post/${post.id.replace(/\.[^.]+$/, '')}`)}>{post.data.title}</a>
                 </li>
               ))}
             </ul>

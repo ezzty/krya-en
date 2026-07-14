@@ -238,7 +238,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         const excerpt = post ? post.excerpt : '';
         return `
           <li class="result-item">
-            <a href="/post/${post ? post.slug : docId}" class="result-title">
+            <a href="/post/${post ? post.slug : docId}/" class="result-title">
               ${escapeHtml(title)}
               <span class="result-score">${score.toFixed(2)}</span>
             </a>

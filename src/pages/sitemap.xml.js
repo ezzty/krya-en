@@ -34,63 +34,63 @@ export async function GET() {
     },
     // Archives page
     {
-      loc: `${siteUrl}/archives`,
+      loc: `${siteUrl}/archives/`,
       lastmod: new Date().toISOString(),
       changefreq: 'daily',
       priority: 0.8,
     },
     // About page
     {
-      loc: `${siteUrl}/about`,
+      loc: `${siteUrl}/about/`,
       lastmod: new Date().toISOString(),
       changefreq: 'monthly',
       priority: 0.5,
     },
     // Categories list page
     {
-      loc: `${siteUrl}/categories`,
+      loc: `${siteUrl}/categories/`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.7,
     },
     // Category detail pages
     ...Array.from(categorySet).map(category => ({
-      loc: `${siteUrl}/categories/${encodeURIComponent(category)}`,
+      loc: `${siteUrl}/categories/${encodeURIComponent(category)}/`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.6,
     })),
     // Tags list page
     {
-      loc: `${siteUrl}/tags`,
+      loc: `${siteUrl}/tags/`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.7,
     },
     // Tag detail pages
     ...Array.from(tagSet).map(tag => ({
-      loc: `${siteUrl}/tags/${encodeURIComponent(tag)}`,
+      loc: `${siteUrl}/tags/${encodeURIComponent(tag)}/`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.6,
     })),
     // Search page
     {
-      loc: `${siteUrl}/search`,
+      loc: `${siteUrl}/search/`,
       lastmod: new Date().toISOString(),
       changefreq: 'monthly',
       priority: 0.5,
     },
     // Paginated pages
     ...Array.from({ length: Math.max(0, Math.ceil(publishedPosts.length / 8) - 1) }, (_, i) => ({
-      loc: `${siteUrl}/p/${i + 2}`,
+      loc: `${siteUrl}/p/${i + 2}/`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.5,
     })),
     // All posts
     ...publishedPosts.map(post => ({
-      loc: `${siteUrl}/post/${post.id.replace(/\.[^.]+$/, '')}`,
+      loc: `${siteUrl}/post/${post.id.replace(/\.[^.]+$/, '')}/`,
       lastmod: new Date(post.data.pubDate).toISOString(),
       changefreq: 'weekly',
       priority: 0.6,

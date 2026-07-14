@@ -14,6 +14,7 @@ posts.forEach(post => {
 });
 
 const tags = Array.from(tagCount.entries()).sort((a, b) => b[1] - a[1]);
+import { withTrailingSlash } from '../lib/utils';
 ---
 
 <BaseLayout title="Tags | krya">
@@ -24,7 +25,7 @@ const tags = Array.from(tagCount.entries()).sort((a, b) => b[1] - a[1]);
       {tags.length > 0 ? (
         <div class="tag-cloud">
           {tags.map(([tag, count]) => (
-            <a href={`/tags/${encodeURIComponent(tag)}`} class="tag-item">
+            <a href={withTrailingSlash(`/tags/${encodeURIComponent(tag)}`)} class="tag-item">
               <span class="tag-name">{tag}</span>
               <span class="tag-count">{count}</span>
             </a>

@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://en.krya.com',
   output: 'static',
+  trailingSlash: 'always',
   compressHTML: true,
   markdown: {
     remarkPlugins: [

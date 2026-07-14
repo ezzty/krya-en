@@ -28,6 +28,7 @@ const posts = allPosts
     return tags.includes(decodedTag);
   })
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+import { withTrailingSlash } from '../../lib/utils';
 ---
 
 <BaseLayout title={`Tag: ${decodedTag} | krya`}>
@@ -40,7 +41,7 @@ const posts = allPosts
           {posts.map(post => (
             <article class="post-item">
               <h2 class="post-title-small">
-                <a href={`/post/${post.id.replace(/\.[^.]+$/, '')}`}>{post.data.title}</a>
+                <a href={withTrailingSlash(`/post/${post.id.replace(/\.[^.]+$/, '')}`)}>{post.data.title}</a>
               </h2>
               <div class="post-meta">
                 <span>{new Date(post.data.pubDate).toISOString().split('T')[0]}</span>

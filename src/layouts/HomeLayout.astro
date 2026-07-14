@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
-import { formatDate, getPageNumbers } from '../lib/utils';
+import { formatDate, getPageNumbers, withTrailingSlash} from '../lib/utils';
 
 interface Post {
   title: string;
@@ -32,7 +32,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     {posts.map((post) => (
       <article class="post">
         <div class="col-3 index-image">
-          <a href={`/post/${post.slug}`} class="thumbnail-link">
+          <a href={withTrailingSlash(`/post/${post.slug}`)} class="thumbnail-link">
             <picture>
               <source 
                 media="(min-width: 800px)" 
@@ -52,10 +52,10 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           </a>
         </div>
         <h1 class="col-9 post-title">
-          <a href={`/post/${post.slug}`}>{post.title}</a>
+          <a href={withTrailingSlash(`/post/${post.slug}`)}>{post.title}</a>
         </h1>
         <ul class="col-9 post-meta">
-          <li>By: <a href="/about">{post.author}</a></li>
+          <li>By: <a href={withTrailingSlash('/about')}>{post.author}</a></li>
           <li>{formatDate(post.pubDate)}</li>
           <li>{post.wordCount} words</li>
         </ul>
@@ -71,7 +71,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           {/* Previous page */}
           {currentPage > 1 && (
             <li class="page-item">
-              <a href={currentPage === 2 ? '/' : `/p/${currentPage - 1}`} class="page-link">&lt;</a>
+              <a href={currentPage === 2 ? '/' : withTrailingSlash(`/p/${currentPage - 1}`)} class="page-link">&lt;</a>
             </li>
           )}
           
@@ -79,7 +79,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           {pageNumbers.map((page) => (
             <li class="page-item">
               <a 
-                href={page === 1 ? '/' : `/p/${page}`} 
+                href={page === 1 ? '/' : withTrailingSlash(`/p/${page}`)} 
                 class={`page-link ${page === currentPage ? 'active' : ''}`}
               >
                 {page}
@@ -90,7 +90,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           {/* Next page */}
           {currentPage < totalPages && (
             <li class="page-item">
-              <a href={`/p/${currentPage + 1}`} class="page-link">&gt;</a>
+              <a href={withTrailingSlash(`/p/${currentPage + 1}`)} class="page-link">&gt;</a>
             </li>
           )}
         </ul>

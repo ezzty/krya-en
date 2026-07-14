@@ -22,6 +22,37 @@ export function extractFirstImage(content: string): string | null {
 }
 
 // 格式化日期：2026-04-18
+
+/** 站内路径统一尾斜杠（与 trailingSlash: 'always' / 静态站规范 URL 一致）。根路径与带扩展名的文件不动。 */
+export function withTrailingSlash(path: string): string {
+  if (!path || path === '/') return '/';
+  if (/^https?:\/\//i.test(path)) {
+    try {
+      const u = new URL(path);
+      if (!u.pathname.endsWith('/') && !/\.[a-zA-Z0-9]+$/.test(u.pathname)) {
+        u.pathname += '/';
+      }
+      return u.toString();
+    } catch {
+      return path;
+    }
+  }
+  const hashIdx = path.indexOf('#');
+  const queryIdx = path.indexOf('?');
+  let pathname = path;
+  let suffix = '';
+  if (hashIdx !== -1) {
+    suffix = path.slice(hashIdx);
+    pathname = path.slice(0, hashIdx);
+  } else if (queryIdx !== -1) {
+    suffix = path.slice(queryIdx);
+    pathname = path.slice(0, queryIdx);
+  }
+  if (pathname.endsWith('/')) return pathname + suffix;
+  if (/\.[a-zA-Z0-9]+$/.test(pathname)) return pathname + suffix;
+  return pathname + '/' + suffix;
+}
+
 export function formatDate(date: string | Date): string {
   const d = typeof date === 'string' ? new Date(date) : date;
   return d.toISOString().split('T')[0];
