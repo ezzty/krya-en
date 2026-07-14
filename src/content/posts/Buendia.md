@@ -6,7 +6,7 @@ draft: false
 categories:
   - Life
 tags:
-  - 家庭氛围
+  - Family Atmosphere
   - Character Building
 ---
 

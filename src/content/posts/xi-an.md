@@ -6,7 +6,7 @@ draft: false
 categories:
   - Travel
 tags:
-  - 西安
+  - Xi'an
   - Bazhong Guangwu Mountain
 ---
 
