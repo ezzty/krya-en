@@ -7,7 +7,7 @@ categories:
   - Tech
 tags:
   - Leaving the Solar System
-  - Fastest Human Speed
+  - Humanity's Fastest Speed
   - Interstellar Flight
 ---
 

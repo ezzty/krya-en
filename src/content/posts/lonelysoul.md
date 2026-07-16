@@ -6,7 +6,7 @@ draft: false
 categories:
   - Travel
 tags:
-  - Sancha Lake Trip
+  - Sancha Lake Travelogue
   - Chengdu Sancha Lake
 ---
 

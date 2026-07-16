@@ -6,7 +6,7 @@ draft: false
 categories:
   - Reading
 tags:
-  - Buried Alive
+  - Soft Burial
   - Hu Daiyu
 ---
 

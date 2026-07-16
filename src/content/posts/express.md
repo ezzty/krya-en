@@ -6,8 +6,8 @@ draft: false
 categories:
   - Life
 tags:
-  - Home Delivery
-  - Delivery to Station
+  - Doorstep Delivery
+  - Courier Locker Delivery
 ---
 
 Last year, the newly revised *Express Delivery Market Management Measures* officially took effect. Among its provisions, the rule that "packages must not be sent to lockers or pickup stations without user consent" sparked widespread discussion.

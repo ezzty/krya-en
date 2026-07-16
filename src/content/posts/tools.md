@@ -9,6 +9,7 @@ tags:
   - AI
   - Home Assistant
   - Smart Home
+  - Tools
 ---
 
 You're out and about, and suddenly you think — did I forget to close the door?

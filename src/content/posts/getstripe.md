@@ -7,7 +7,7 @@ categories:
   - Finance
 tags:
   - Stripe HK
-  - Stripe Registration
+  - Stripe Payment Registration
   - Stripe Payments
 ---
 

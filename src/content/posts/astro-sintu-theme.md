@@ -9,6 +9,7 @@ tags:
   - Blog
   - Astro
   - Typecho
+  - Migration
 ---
 
 ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif)

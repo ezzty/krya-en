@@ -7,7 +7,7 @@ categories:
   - Life
 tags:
   - Family Atmosphere
-  - Character Building
+  - Character Formation
 ---
 
 ![0518-bks-RUSHDIE-videoSixteenByNine1050.jpg](https://i.190808.xyz/typecho/2020/03/20/0518-bks-RUSHDIE-videoSixteenByNine1050.jpg)

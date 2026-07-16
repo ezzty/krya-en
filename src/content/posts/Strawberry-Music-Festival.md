@@ -6,7 +6,7 @@ draft: false
 categories:
   - Life
 tags:
-  - Chengdu Strawberry Festival
+  - Chengdu Strawberry Music Festival
 ---
 
 This was the Strawberry Music Festival's first time in Chengdu. I usually listen to music on Xiami and knew a few familiar artists, so I went with some friends. Chengdu had just stepped into summer, and the atmosphere at the venue was electric. But the girls' outfits were refreshingly cool — hard to resist. This year's theme was "SNS life is rubbish, get a real life." I couldn't agree more — with so many girls around, who the hell wants to hang out online!

@@ -6,8 +6,8 @@ draft: false
 categories:
   - Life
 tags:
-  - Oil Minerals
-  - Oil Contamination
+  - Mineral Oil in Cooking Oil
+  - Cooking Oil Pollution
 ---
 
 ![ddaaf.jpg|87](https://i.190808.xyz/typecho/2024/11/24/ddaaf.jpg)

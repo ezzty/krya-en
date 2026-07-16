@@ -6,10 +6,10 @@ draft: false
 categories:
   - Finance
 tags:
-  - HK Bank Account
+  - HK Bank Card Opening
   - HK Account Opening
-  - HSBC HK Account
-  - BOC HK Account
+  - HSBC HK Account Opening
+  - BOC HK Account Opening
 ---
 
 ![hkca2.jpg](https://i.190808.xyz/typecho/2025/02/24/hkca2.jpg)

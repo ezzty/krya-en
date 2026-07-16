@@ -8,7 +8,7 @@ categories:
 tags:
   - Henan Travel
   - Luoyang Travel
-  - Xuchang Pang Donglai
+  - Pangdonglai Xuchang
   - Xiangyang Ancient City
 ---
 

@@ -6,7 +6,7 @@ draft: false
 categories:
   - Life
 tags:
-  - 2018 Year Summary
+  - 2018 Year in Review
 ---
 
 Since life hasn't undergone earth-shattering changes, I haven't written a year-end review in quite a few years. Its existence is necessarily a ritual — something worth commemorating.

@@ -7,7 +7,7 @@ categories:
   - Travel
 tags:
   - Lijiang
-  - Lijiang
+  - lijiang
 ---
 
 **D6: The Old Town**

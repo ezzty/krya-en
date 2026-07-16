@@ -6,9 +6,9 @@ draft: false
 categories:
   - Life
 tags:
-  - Cybersecurity
-  - Anonymous Website
-  - Privacy Protection
+  - Network Security
+  - Web Anonymity
+  - Hiding Personal Info
 ---
 
 ![edwardsnowden_onuitwisbaar_balans.png](https://i.190808.xyz/typecho/2020/03/22/edwardsnowden_onuitwisbaar_balans.png)
