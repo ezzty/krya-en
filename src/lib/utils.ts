@@ -21,8 +21,6 @@ export function extractFirstImage(content: string): string | null {
   return null;
 }
 
-// 格式化日期：2026-04-18
-
 /** 站内路径统一尾斜杠（与 trailingSlash: 'always' / 静态站规范 URL 一致）。根路径与带扩展名的文件不动。 */
 export function withTrailingSlash(path: string): string {
   if (!path || path === '/') return '/';
@@ -53,9 +51,70 @@ export function withTrailingSlash(path: string): string {
   return pathname + '/' + suffix;
 }
 
-export function formatDate(date: string | Date): string {
+export function toEast8Parts(date: string | Date): {
+  year: number;
+  month: number;
+  day: number;
+  hours: number;
+  minutes: number;
+  dateStr: string;
+  source: Date;
+} {
   const d = typeof date === 'string' ? new Date(date) : date;
-  return d.toISOString().split('T')[0];
+  const offset = d.getTimezoneOffset() * 60000;
+  const local = new Date(d.getTime() + offset + 8 * 3600000);
+  const dateStr = local.toISOString().split('T')[0];
+  const [year, month, day] = dateStr.split('-').map(Number);
+  return {
+    year,
+    month,
+    day,
+    hours: local.getUTCHours(),
+    minutes: local.getUTCMinutes(),
+    dateStr,
+    source: d,
+  };
+}
+
+/** 归档用：YYYY-MM（东八区） */
+export function getYearMonthEast8(date: string | Date): string {
+  const { year, month } = toEast8Parts(date);
+  return `${year}-${String(month).padStart(2, '0')}`;
+}
+
+// 格式化日期：2026-04-18 或 2026-04-18 14:30（东八区，有时间则显示）
+export function formatDate(date: string | Date): string {
+  const { dateStr, hours, minutes, source } = toEast8Parts(date);
+  if (source.getUTCHours() === 0 && source.getUTCMinutes() === 0) {
+    return dateStr;
+  }
+  const hh = String(hours).padStart(2, '0');
+  const mm = String(minutes).padStart(2, '0');
+  return `${dateStr} ${hh}:${mm}`;
+}
+
+export interface PostEntry {
+  id: string;
+  data: {
+    categories?: string[];
+    tags?: string[];
+    draft?: boolean;
+    pubDate?: Date | string;
+    [key: string]: unknown;
+  };
+  body?: string;
+}
+
+// 获取文章集合的分类计数（去重，按数量降序）
+export function buildCategoryCounts(posts: PostEntry[]) {
+  const count = new Map<string, number>();
+  posts.forEach(post => {
+    const categories = post.data.categories || [];
+    categories.forEach(cat => {
+      count.set(cat, (count.get(cat) || 0) + 1);
+    });
+  });
+  return Array.from(count.entries()).sort((a, b) => b[1] - a[1]);
 }
 
 // 生成页码列表（最多显示 5 个页码，移动端 CSS 隐藏为 3 个）

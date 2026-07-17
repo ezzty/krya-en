@@ -2,24 +2,25 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
 import { getCollection } from 'astro:content';
-import { formatDate, withTrailingSlash} from '../lib/utils';
+import { buildCategoryCounts, formatDate, getYearMonthEast8, withTrailingSlash } from '../lib/utils';
 
 const posts = (await getCollection('posts')).filter(post => !post.data.draft);
 
-// Group by year and month
+const categories = buildCategoryCounts(posts);
+
+// Group by East-8 year-month (same as formatDate)
 const groupedPosts: Record<string, typeof posts> = {};
 
-posts.sort((a, b) => {
-  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
-}).forEach((post) => {
-  const date = new Date(post.data.pubDate);
-  const yearMonth = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-  
-  if (!groupedPosts[yearMonth]) {
-    groupedPosts[yearMonth] = [];
-  }
-  groupedPosts[yearMonth].push(post);
-});
+[...posts]
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .forEach((post) => {
+    const yearMonth = getYearMonthEast8(post.data.pubDate);
+
+    if (!groupedPosts[yearMonth]) {
+      groupedPosts[yearMonth] = [];
+    }
+    groupedPosts[yearMonth].push(post);
+  });
 ---
 
 <BaseLayout title="Archives - krya">
@@ -27,13 +28,28 @@ posts.sort((a, b) => {
   
   <div class="col-mb-12" id="main" role="main">
     <article class="post">
-      <h1 class="post-title">Archives</h1>
-      
+      <!-- Categories section (merged like krya) -->
+      {categories.length > 0 && (
+        <div class="archive-categories">
+          <h2 class="section-title">Categories</h2>
+          <div class="category-list">
+            {categories.map(([category, count]) => (
+              <a href={withTrailingSlash(`/categories/${encodeURIComponent(category)}`)} class="category-item">
+                <span class="category-name">{category}</span>
+                <span class="category-count">{count}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Archives section -->
+      <h2 class="section-title">Archives</h2>
       {Object.entries(groupedPosts).map(([yearMonth, posts]) => {
         const [year, month] = yearMonth.split('-');
         return (
           <div class="archive-group">
-            <h2 class="archive-year">{year}.{month}</h2>
+            <h3 class="archive-year">{year}.{month}</h3>
             <ul class="archive-list">
               {posts.map((post) => (
                 <li>

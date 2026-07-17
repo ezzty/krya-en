@@ -496,7 +496,7 @@ html[data-theme="dark"] .post-content hr {
 }
 
 .category-list {
-  margin: 130px auto;
+  margin: 15px auto;
 }
 
 .visually-hidden {
@@ -696,6 +696,49 @@ html[data-theme="dark"] .archive-list a {
 
 html[data-theme="dark"] .archive-list a:hover {
   color: #bbb;
+}
+
+/* 归档页/分类页共享样式（与 krya 一致：分类合并到归档顶部） */
+.archive-categories {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 1023px) {
+  .archive-categories {
+    margin-bottom: 1.2em;
+    padding-bottom: 1em;
+  }
+}
+
+html[data-theme="dark"] .archive-categories {
+  border-bottom-color: #3b3b3b;
+}
+
+.section-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  color: #4d4d4d;
+}
+
+html[data-theme="dark"] .section-title {
+  color: #e0e0e0;
+}
+
+.category-item.active {
+  background-color: #3354AA;
+  border-color: #3354AA;
+}
+
+.category-item.active .category-name,
+.category-item.active .category-count {
+  color: #fff;
+}
+
+.category-item.active .category-count {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 /* 表格样式 */

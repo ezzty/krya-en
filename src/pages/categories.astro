@@ -2,19 +2,11 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
+import { buildCategoryCounts, withTrailingSlash } from '../lib/utils';
 
 const posts = (await getCollection('posts')).filter(post => !post.data.draft);
 
-const categoryCount = new Map<string, number>();
-posts.forEach(post => {
-  const categories = post.data.categories || [];
-  categories.forEach(category => {
-    categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
-  });
-});
-
-const categories = Array.from(categoryCount.entries()).sort((a, b) => b[1] - a[1]);
-import { withTrailingSlash } from '../lib/utils';
+const categories = buildCategoryCounts(posts);
 ---
 
 <BaseLayout title="Categories | krya">
