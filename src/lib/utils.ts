@@ -95,8 +95,8 @@ export function formatDate(date: string | Date): string {
 }
 
 // 截取摘要：超长才加省略号，短摘要原样返回
-// en 站用更长默认值（krya 中文默认 67 对英文过短；旧版 en 约 118）
-export function truncateExcerpt(excerpt: string, length: number = 180): string {
+// en 站用更长默认值（krya 中文默认 67 对英文过短）
+export function truncateExcerpt(excerpt: string, length: number = 170): string {
   if (!excerpt) return '';
   if (excerpt.length <= length) return excerpt;
   return excerpt.slice(0, length) + '...';
