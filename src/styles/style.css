@@ -172,7 +172,7 @@ textarea {
 .post-title {
   margin: 0 0 0.5em 0;
   font-size: 1.3em;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.01em; /* 英文比 0.1em 更紧凑 */
   text-align: left;
 }
 
