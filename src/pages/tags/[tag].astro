@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import NavBar from '../../components/NavBar.astro';
+import { formatDate, withTrailingSlash } from '../../lib/utils';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('posts')).filter(post => !post.data.draft);
@@ -28,13 +29,12 @@ const posts = allPosts
     return tags.includes(decodedTag);
   })
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-import { withTrailingSlash } from '../../lib/utils';
 ---
 
 <BaseLayout title={`Tag: ${decodedTag} | krya`}>
   <NavBar slot="header" />
   <div class="container">
-    <div class="col-mb-12">
+    <div class="col-mb-12" id="main" role="main">
       <h1 class="tags-title">Tag: {decodedTag}</h1>
       {posts.length > 0 ? (
         <div class="post-list">
@@ -44,7 +44,7 @@ import { withTrailingSlash } from '../../lib/utils';
                 <a href={withTrailingSlash(`/post/${post.id.replace(/\.[^.]+$/, '')}`)}>{post.data.title}</a>
               </h2>
               <div class="post-meta">
-                <span>{new Date(post.data.pubDate).toISOString().split('T')[0]}</span>
+                <span>{formatDate(post.data.pubDate.toISOString())}</span>
               </div>
             </article>
           ))}

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
-import { formatDate, withTrailingSlash} from '../lib/utils';
+import { formatDate, withTrailingSlash } from '../lib/utils';
 
 interface Props {
   title: string;
@@ -16,16 +16,22 @@ interface Props {
 
 const { title, description, author, pubDate, wordCount = 0, tags = [], categories = [], thumbnail } = Astro.props;
 
-// Process og:image URL
+// Process og:image URL (fallback to site default)
 const ogImage = thumbnail || 'https://en.krya.com/og-image.png';
+const isDefaultOg = ogImage === 'https://en.krya.com/og-image.png';
 ---
 
-<BaseLayout title={title} description={description || "Jin's personal blog"}>
+<BaseLayout
+  title={title}
+  description={description || "Jin's personal blog"}
+  image={ogImage}
+  imageWidth={isDefaultOg ? 120 : undefined}
+  imageHeight={isDefaultOg ? 120 : undefined}
+  type="article"
+>
   <NavBar slot="header" />
   
-  <!-- Post page SEO meta - placed in head -->
-  <meta slot="head" property="og:image" content={ogImage} />
-  <meta slot="head" property="og:type" content="article" />
+  <!-- Post page SEO meta -->
   <meta slot="head" property="article:published_time" content={pubDate} />
   {tags.length > 0 && (
     <meta slot="head" property="article:tag" content={tags.join(', ')} />
@@ -41,6 +47,7 @@ const ogImage = thumbnail || 'https://en.krya.com/og-image.png';
     },
     "datePublished": pubDate,
     "description": Astro.props.description || '',
+    "image": ogImage,
     "url": Astro.url.href
   })} />
   

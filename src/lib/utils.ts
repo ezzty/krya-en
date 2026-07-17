@@ -20,10 +20,10 @@ export function extractFirstImage(content: string): string | null {
   
   return null;
 }
-
-/** 站内路径统一尾斜杠（与 trailingSlash: 'always' / 静态站规范 URL 一致）。根路径与带扩展名的文件不动。 */
+/** 站内路径统一尾斜杠（与 trailingSlash: 'always' / CF 规范 URL 一致）。根路径与带扩展名的文件不动。 */
 export function withTrailingSlash(path: string): string {
   if (!path || path === '/') return '/';
+  // 外链原样
   if (/^https?:\/\//i.test(path)) {
     try {
       const u = new URL(path);
@@ -47,10 +47,10 @@ export function withTrailingSlash(path: string): string {
     pathname = path.slice(0, queryIdx);
   }
   if (pathname.endsWith('/')) return pathname + suffix;
+  // .xml .js 等静态文件不加斜杠
   if (/\.[a-zA-Z0-9]+$/.test(pathname)) return pathname + suffix;
   return pathname + '/' + suffix;
 }
-
 export function toEast8Parts(date: string | Date): {
   year: number;
   month: number;
@@ -85,6 +85,7 @@ export function getYearMonthEast8(date: string | Date): string {
 // 格式化日期：2026-04-18 或 2026-04-18 14:30（东八区，有时间则显示）
 export function formatDate(date: string | Date): string {
   const { dateStr, hours, minutes, source } = toEast8Parts(date);
+  // UTC 00:00 表示没有设置时间，只显示日期
   if (source.getUTCHours() === 0 && source.getUTCMinutes() === 0) {
     return dateStr;
   }
@@ -93,28 +94,11 @@ export function formatDate(date: string | Date): string {
   return `${dateStr} ${hh}:${mm}`;
 }
 
-export interface PostEntry {
-  id: string;
-  data: {
-    categories?: string[];
-    tags?: string[];
-    draft?: boolean;
-    pubDate?: Date | string;
-    [key: string]: unknown;
-  };
-  body?: string;
-}
-
-// 获取文章集合的分类计数（去重，按数量降序）
-export function buildCategoryCounts(posts: PostEntry[]) {
-  const count = new Map<string, number>();
-  posts.forEach(post => {
-    const categories = post.data.categories || [];
-    categories.forEach(cat => {
-      count.set(cat, (count.get(cat) || 0) + 1);
-    });
-  });
-  return Array.from(count.entries()).sort((a, b) => b[1] - a[1]);
+// 截取摘要：超长才加省略号，短摘要原样返回
+export function truncateExcerpt(excerpt: string, length: number = 67): string {
+  if (!excerpt) return '';
+  if (excerpt.length <= length) return excerpt;
+  return excerpt.slice(0, length) + '...';
 }
 
 // 生成页码列表（最多显示 5 个页码，移动端 CSS 隐藏为 3 个）
@@ -122,16 +106,19 @@ export function getPageNumbers(current: number, total: number): number[] {
   if (total <= 5) {
     return Array.from({ length: total }, (_, i) => i + 1);
   }
+  
   if (current <= 3) {
     return [1, 2, 3, 4, 5];
   }
+  
   if (current >= total - 2) {
     return [total - 4, total - 3, total - 2, total - 1, total];
   }
+  
   return [current - 2, current - 1, current, current + 1, current + 2];
 }
 
-// 处理缩略图 URL
+// 处理缩略图 URL（任意 URL：剥旧 x-oss-process 后统一追加 style 参数）
 export function processThumbnailUrl(url: string | null, thumbnailStyle: string = 'w140'): string | null {
   if (!url) return null;
   const withoutOssParam = url.replace(/\?x-oss-process=[^&\s]*/, '');
@@ -143,7 +130,6 @@ export function getRandomThumbnailIndex(seed: string): number {
   let hash = 0;
   for (let i = 0; i < seed.length; i++) {
     hash = ((hash << 5) - hash) + seed.charCodeAt(i);
-    hash = hash & hash;
   }
   return Math.abs(hash) % 6;
 }
@@ -181,6 +167,36 @@ export function countWords(content: string): number {
 }
 
 // 格式化文章列表
+export interface PostData {
+  title: string;
+  pubDate: Date;
+  author?: string;
+  description?: string;
+  thumbnail?: string;
+  draft?: boolean;
+  categories?: string[];
+  tags?: string[];
+}
+
+
+// 获取文章集合的分类计数（去重，按数量降序）
+export function buildCategoryCounts(posts: PostEntry[]) {
+  const count = new Map<string, number>();
+  posts.forEach(post => {
+    const categories = post.data.categories || [];
+    categories.forEach(cat => {
+      count.set(cat, (count.get(cat) || 0) + 1);
+    });
+  });
+  return Array.from(count.entries()).sort((a, b) => b[1] - a[1]);
+}
+
+export interface PostEntry {
+  id: string;
+  data: PostData;
+  body?: string;
+}
+
 export interface FormattedPost {
   title: string;
   slug: string;
@@ -197,42 +213,38 @@ export interface FormatPostsResult {
   currentPage: number;
 }
 
-export function formatPosts(posts: any[], pageSize: number, page: number = 1): FormatPostsResult {
-  const sortedPosts = posts.sort((a, b) => {
+export function formatPosts(posts: PostEntry[], pageSize: number, page: number = 1): FormatPostsResult {
+  // 拷贝后排序，避免原地 sort 影响 getStaticPaths 多次调用
+  const sortedPosts = [...posts].sort((a, b) => {
     return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
   });
-  
+
   const totalPages = Math.ceil(sortedPosts.length / pageSize);
   const start = (page - 1) * pageSize;
   const end = page * pageSize;
   const paginatedPosts = sortedPosts.slice(start, end);
-  
+
   const formattedPosts = paginatedPosts.map((post) => {
-    let thumbnail = post.data.thumbnail;
-    if (!thumbnail) {
-      const firstImage = extractFirstImage(post.body || '');
-      if (firstImage) {
-        thumbnail = firstImage;
-      } else {
-        thumbnail = `/img/random/${getRandomThumbnailIndex(post.id)}.webp`;
-      }
-    }
-    
-    thumbnail = processThumbnailUrl(thumbnail, 'w140');
+    const rawThumbnail =
+      post.data.thumbnail ||
+      extractFirstImage(post.body || '') ||
+      `/img/random/${getRandomThumbnailIndex(post.id)}.webp`;
+    const thumbnail = processThumbnailUrl(rawThumbnail, 'w140') || rawThumbnail;
     const plainText = stripMarkdown(post.body || '');
     const wordCount = countWords(post.body || '');
-    
+
     return {
       title: post.data.title,
       slug: post.id.replace(/\.[^.]+$/, ''),
       author: post.data.author || 'Jin',
       pubDate: post.data.pubDate.toISOString(),
       wordCount,
-      excerpt: post.data.description || plainText.slice(0, 118),
+      // 完整摘要交给展示层 truncateExcerpt 处理（避免预截断导致永远显示 ...）
+      excerpt: post.data.description || plainText,
       thumbnail,
     };
   });
-  
+
   return {
     posts: formattedPosts,
     totalPages,

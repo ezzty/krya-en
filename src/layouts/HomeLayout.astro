@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
-import { formatDate, getPageNumbers, withTrailingSlash} from '../lib/utils';
+import { formatDate, truncateExcerpt, getPageNumbers, withTrailingSlash } from '../lib/utils';
 
 interface Post {
   title: string;
@@ -25,7 +25,7 @@ const { posts, currentPage = 1, totalPages = 1 } = Astro.props;
 const pageNumbers = getPageNumbers(currentPage, totalPages);
 ---
 
-<BaseLayout title="krya">
+<BaseLayout title="krya" description="Jin's personal blog - travel, life, and notes">
   <NavBar slot="header" />
   
   <div class="col-mb-12" id="main" role="main">
@@ -60,7 +60,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
           <li>{post.wordCount} words</li>
         </ul>
         <div class="col-9 post-content">
-          {post.excerpt}...
+          {truncateExcerpt(post.excerpt)}
         </div>
       </article>
     ))}
@@ -68,28 +68,25 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     {totalPages > 1 && (
       <nav class="pagination">
         <ul class="page-list">
-          {/* Previous page */}
           {currentPage > 1 && (
-            <li class="page-item">
+            <li class="page-item page-nav">
               <a href={currentPage === 2 ? '/' : withTrailingSlash(`/p/${currentPage - 1}`)} class="page-link">&lt;</a>
             </li>
           )}
           
-          {/* Page numbers */}
-          {pageNumbers.map((page) => (
-            <li class="page-item">
+          <li class="page-numbers">
+            {pageNumbers.map((page) => (
               <a 
                 href={page === 1 ? '/' : withTrailingSlash(`/p/${page}`)} 
                 class={`page-link ${page === currentPage ? 'active' : ''}`}
               >
                 {page}
               </a>
-            </li>
-          ))}
+            ))}
+          </li>
           
-          {/* Next page */}
           {currentPage < totalPages && (
-            <li class="page-item">
+            <li class="page-item page-nav">
               <a href={withTrailingSlash(`/p/${currentPage + 1}`)} class="page-link">&gt;</a>
             </li>
           )}
@@ -100,17 +97,15 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
 </BaseLayout>
 
 <style>
-  /* Thumbnail link - remove default underline */
   .thumbnail-link {
     display: block;
-    border-bottom: none !important;
+    border-bottom: none;
   }
   
   .thumbnail-link:hover {
-    border-bottom: none !important;
+    border-bottom: none;
   }
   
-  /* Home thumbnail hover zoom effect */
   .index-image {
     overflow: hidden;
     border-radius: 12px;
@@ -137,7 +132,7 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     margin: 60px 0 40px;
     text-align: center;
   }
-
+  
   .page-list {
     list-style: none;
     padding: 0;
@@ -146,11 +141,16 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     align-items: center;
     gap: 8px;
   }
-
+  
+  .page-numbers {
+    display: flex;
+    gap: 8px;
+  }
+  
   .page-item {
     display: inline-block;
   }
-
+  
   .page-link {
     display: flex;
     align-items: center;
@@ -160,45 +160,41 @@ const pageNumbers = getPageNumbers(currentPage, totalPages);
     border-radius: 4px;
     text-decoration: none;
     transition: all 0.2s ease;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
-
-  /* Light mode */
+  
   .page-link {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     color: #333;
   }
-
+  
   .page-link:hover {
     background-color: #e8e8e8;
     border-color: #ccc;
   }
-
+  
   .page-link.active {
     background-color: #007bff;
     border-color: #007bff;
     color: #fff;
     font-weight: bold;
   }
-
-  /* Dark mode */
+  
   html[data-theme="dark"] .page-link {
     background-color: #303030;
     border: 1px solid #3d3d3d;
     color: #999;
   }
-
+  
   html[data-theme="dark"] .page-link:hover {
     background-color: #434343;
     border-color: #3a3a3a;
   }
-
+  
   html[data-theme="dark"] .page-link.active {
     background-color: #505050;
     border-color: #4e4e4e;
     color: #fff;
     font-weight: 700;
   }
-
 </style>
