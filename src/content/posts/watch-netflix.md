@@ -3,12 +3,10 @@ title: A Technical Guide to Watching Netflix in China
 pubDate: '2019-03-03'
 author: jin
 draft: false
-categories:
-  - Tech
-tags:
-  - Netflix in China
-  - Netflix on TV
+categories: ["Tech"]
+tags: ["Netflix in China", "Netflix on TV"]
 ---
+
 
 ![0240703211733.png](https://i.190808.xyz/typecho/2024/07/03/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240703211733.png)
 
