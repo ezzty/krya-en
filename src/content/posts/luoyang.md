@@ -18,7 +18,7 @@ Road trips have just one real advantage over train travel: freedom. Stop whereve
 
 For the past few years, our travels have been confined to areas south of Sichuan. The farthest north we'd been was Xi'an — we hadn't really explored other parts of the north. So I'd always wanted to experience the vast North China Plain and soak in the northern atmosphere.
 
-![5.avif](https://user0102.cn.imgto.link/public/20260422/5-1.avif)
+![image](https://i.190808.xyz/img/m/20260608/68c6b7.png)
 ![4.jpg](https://i.190808.xyz/typecho/2026/04/07/4.jpg)
 
 > 📷 Terracotta Warriors of Qin Shi Huang

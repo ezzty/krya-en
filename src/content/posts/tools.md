@@ -20,7 +20,7 @@ To solve this problem, I built a "toolbox" page that puts all my home informatio
 
 The story starts with an image hosting service.
 
-![948.avif](https://user0102.cn.imgto.link/public/20260429/948.avif)
+![image](https://i.190808.xyz/img/m/20260608/bd7522.png)
 
 ### Starting with Image Hosting
 

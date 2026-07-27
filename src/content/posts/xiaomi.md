@@ -11,7 +11,7 @@ tags:
   - Xiaomi Growth
 ---
 
-![wj-2.avif](https://user0102.cn.imgto.link/public/20260422/wj-2.avif)
+![image](https://i.190808.xyz/img/m/20260608/06a042.jpg)
 
 In February 2025, I opened a bank and stock account in Hong Kong and started buying Xiaomi shares. Since then, I've accumulated several thousand shares and plan to gradually add to my position, aiming for 10,000 shares over time.
 

@@ -11,7 +11,7 @@ tags:
   - OpenClaw Skills
 ---
 
-![openclaw-banner.avif](https://user0102.cn.imgto.link/public/20260422/openclaw-banner.avif)
+![image](https://i.190808.xyz/img/m/20260608/cb8b91.jpg)
 
 As someone working in traditional B2C e-commerce, I'm neither a professional programmer nor do I have any coding background. Before this, my understanding of AI was limited to "smart speakers" and "phone voice assistants." But as a tech enthusiast, learning about the trending OpenClaw naturally made me want to give it a try.
 
