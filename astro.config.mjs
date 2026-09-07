@@ -5,7 +5,7 @@ export default defineConfig({
   site: 'https://en.krya.com',
   output: 'static',
   trailingSlash: 'always',
-  compressHTML: true,
+  compressHTML: 'jsx',
   markdown: {
     remarkPlugins: [
       // 尝试使用 remark 插件
