@@ -1,5 +1,5 @@
 ---
-title: "2024 Thailand Travelogue: Too Happy to Think of Home"
+title: "Thailand Travelogue: Too Happy to Think of Home (2024)"
 pubDate: '2024-10-14'
 author: jin
 draft: false

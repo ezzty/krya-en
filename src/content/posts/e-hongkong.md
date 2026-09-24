@@ -1,5 +1,5 @@
 ---
-title: "My Electronic Hometown — Hong Kong"
+title: "My Electronic Hometown — Hong Kong (2025)"
 pubDate: '2025-03-01'
 author: jin
 draft: false
