@@ -61,7 +61,7 @@ Mainstream cinema needs entertainment value. Though this film borrows Guy Ritchi
 
 8. *The Pursuit of Happyness*
 
-[![](https://images.190808.xyz/bim2019/10/09/215603935220704.jpg?x-oss-process=style/826px)](https://movie.douban.com/subject/1849031/)
+[![](https://i.190808.xyz/bim2019/10/09/215603935220704.jpg)](https://movie.douban.com/subject/1849031/)
 
 An understated film about happiness, starring Will Smith alongside his real-life son.
 

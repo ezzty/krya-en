@@ -38,7 +38,7 @@ For the next few days we stayed in Dongxing City. We were already at the nationa
 
 Entering a new country, I thought the kid would be at least a little curious to explore. But after a ten-minute City Walk through Mong Cai, she got bored and asked when we were going back to Dongxing — she wanted to play at the beach. So for this brief Mong Cai itinerary, I quickly tried to imprint the image of Vietnam on her: the ubiquitous single-star red flags, tall and narrow houses, brightly painted murals on walls, roads jam-packed with deafening motorbikes, Vietnamese drip coffee, conical hats, and even Chinese horseshoe crabs (a protected species in China) being slaughtered at the market.
 
-![7-31.jpg](https://images.190808.xyz/typecho/2025/10/25/7-31.jpg)
+![7-31.jpg](https://i.190808.xyz/typecho/2025/10/25/7-31.jpg)
 
 At noon we returned to Dongxing and drove to Wanwei Golden Beach. Just as we arrived, the sun was setting. The golden beach bathed in the afterglow fulfilled every imagination we had of the sea. Waves lapped against the extraordinarily long sandy shore, fishing boat motors chugged lazily back to port, and the distant sunset cast dazzling golden edges through dark clouds on the horizon. It was so beautiful we decided to just stay at Golden Beach.
 
