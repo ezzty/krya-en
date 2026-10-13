@@ -1,5 +1,5 @@
 ---
-title: 2026 Summer Vacation Self-Driving Trip to Qingdao and Weihai
+title: Summer Vacation Self-Driving Trip to Qingdao and Weihai (2026)
 description: This trip feels like an extension of our April trip to Luoyang, crossing right over Luoyang to reach Qingdao in Shandong. We spent most of our time at the beach, playing in the sand and digging in it. The 10+ days flew by in a flash. Departing from Chengdu, the journey took 14 days with a total mileage of 4902 kilometers. To me, Qingdao feels incredibly vast, packed with cultural and historical sites—almost like the actual capital of Shandong Province, shouldering so many roles. Weihai, by contrast, is a serene coastal town with stunning shorelines, peaceful beaches, and abundant natural landscapes.
 pubDate: 2026-08-11
 heroImage: ""
@@ -41,7 +41,7 @@ That night we stayed in a small county called Nanle County; took the opportunity
 
 On the road, I especially like staying in small counties with few tourists. Because every time we hit a big city, I get stressed out figuring out where to stay—is the hotel good value? How far from the highway? Will there be traffic jams? All things we have to consider. But staying in a small county has none of those worries. The location is bustling enough, the hotel is mid-to-upper range; once we arrive, we feast on delicious food, then crash on a comfortable big bed, and all the day's fatigue vanishes.
 
-On the third afternoon, we finally arrived in Qingdao. Thanks to having a car, we didn't stay in the expensive downtown area, but in Huangdao where the beaches are better. The kid came here mainly to see the sea—only us adults were interested in the cultural sites. But when we drove to May Fourth Square, we found Qingdao's traffic is just as twisty and confusing as Chongqing's, making my head spin. In Qingdao we visited Signal Hill, May Fourth Square, the Olympic Sailing Center, various beaches, and Laoshan.
+On the third afternoon, we finally arrived in Qingdao. Thanks to having a car, we didn't stay in the expensive downtown area, but in Huangdao where the beaches are better. The kid came here mainly to see the sea—only us adults were interested in the cultural sites. But when we drove to May Fourth Square, we found Qingdao's traffic is just as twisty and confusing as Chongqing's, making my head spin. Later we also visited Signal Hill, the Tsingtao Beer Festival Museum, the Underwater World, the Olympic Sailing Center, Taidong Night Market, Laoshan, and the various beaches.
 
 ![w950](https://i.190808.xyz/img/m/20260810/0822c0.jpg?x-oss-process=style/w950)
 
@@ -78,7 +78,13 @@ Qingdao feels incredibly vast to me, with tons of cultural attractions—almost 
 
 We also went to Rongcheng. But because of a flaw in my travel planning, we only stayed one night in Rongcheng. Even the clam digging didn't work out—because I didn't understand the tide patterns, we got up at 5 AM when it was just getting light and went clamming, but came back empty-handed. The kid, however, was thrilled because at the seaside resort, we stayed in a really interesting hotel. It had a loft structure with two floors, and each room had two 1.8-meter big beds, one on each level. The child had never stayed in a hotel like this before and insisted on claiming the upper bed all to herself, not sleeping with mom. We pretended to be very disappointed, but we totally understood inside. Kids, after all, don't know anything.
 
-After Qingdao and Weihai, we'd already been out for 10 days. It seemed only the kid and I were still eager to continue; everyone else was getting a bit tired. So we had to plan the return route. Originally, my plan was to stop by Huaguo Mountain in Lianyungang, then check out Xuzhou. Considering everyone's mood, I didn't add more detours—we just passed through Qufu, Kaifeng, and Xuchang, then via Ankang back to Chengdu. Along the way, we visited the Confucian Temple in Qufu, the Qingming Shanghe Garden in Kaifeng, and the Pang Donglai in Xuchang.
+After Qingdao and Weihai, we'd already been out for 10 days. It seemed only the kid and I were still eager to continue; everyone else was getting a bit tired. So we had to plan the return route. Originally, my plan was to stop by Huaguo Mountain in Lianyungang, then check out Xuzhou. Considering everyone's mood, I didn't add more detours—we just passed through Qufu, Kaifeng, and Xuchang, then via Ankang back to Chengdu.
+
+On the way back we passed through Qufu and wandered around the Confucius Temple. The prices in that small county were astonishing—a 200-yuan order filled the whole table, and five of us couldn't finish it. One morning we bought a vegetable pancake from a roadside stall for 8 yuan: two griddle cakes stuffed with all sorts of greens, and it felt very healthy. We also got a 9.9-yuan bag of cherry tomatoes, a good five or six jin, and we still hadn't finished them by the time we reached Chengdu.
+
+![w950](https://i.190808.xyz/img/m/20260810/22faff.jpg?x-oss-process=style/w950)
+
+We visited Kaifeng's Qingming Shanghe Garden in the evening, and it was packed shoulder to shoulder—pretty true to the spirit of Zhang Zeduan's painting. The lighting and stage sets were gorgeous, and there were plenty of performances. But once the kid reached the children's play area she refused to move, so the two of us stayed with her until the park closed. In the end, we adults spent several hundred yuan just to keep her company for a wild night inside.
 
 ![w950](https://i.190808.xyz/img/m/20260810/1c26ed.jpg?x-oss-process=style/w950)
 
@@ -88,4 +94,4 @@ After Qingdao and Weihai, we'd already been out for 10 days. It seemed only the 
 
 ![w950](https://i.190808.xyz/img/m/20260810/2bef3f.jpg?x-oss-process=style/w950)
 
-![w950](https://i.190808.xyz/img/m/20260810/22faff.jpg?x-oss-process=style/w950)
+Pang Donglai's original-flavor braised beef—buy it with your eyes closed! Last time I came through I bought one piece, and it was gone in half a day; this time I bought two, and to get them from Xuchang back to Chengdu I even bought a foam box and ice packs so they'd stay fresh the whole way. Pang Donglai's pastries are delicious too, but they keep for only a very short time—unfortunately you can't have someone proxy-buy them for you.

@@ -1,5 +1,5 @@
 ---
-title: Spring Break Road Trip to Luoyang
+title: "Xi'an–Luoyang–Xiangyang Road Trip (2026)"
 pubDate: '2026-04-08'
 author: jin
 draft: false

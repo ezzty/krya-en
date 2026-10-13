@@ -1,5 +1,5 @@
 ---
-title: 2025 Vietnam-Guangxi-Yunnan Road Trip
+title: 🇻🇳 Vietnam-Guangxi-Yunnan Road Trip (2025)
 pubDate: '2025-10-26'
 author: jin
 draft: false
