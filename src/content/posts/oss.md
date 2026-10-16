@@ -1,6 +1,6 @@
 ---
 title: Build Your Own Dirt-Cheap Image Host on Alibaba Cloud FC + OSS
-description: Every static blog needs a third-party image host. But which one won't abandon you? Hard to say. And with someone else's image host: you don't control the hotlink protection rules, the service dies and every image 404s, content moderation hits innocent files, free quotas hide traps. After stepping on enough pits, I decided to build my own image host at near-zero cost. The main goal is saving money — unlimited uploads!
+description: "Most self-hosted image host setups need your own server — dozens of yuan a month plus patching yourself — or they only run in a local client, so you can't upload from a different computer. In the end I decided to build a serverless cloud image host: upload anywhere, anytime. Alibaba Cloud Function Compute FC + OSS, FC pay-as-you-go (near ¥0 at low traffic) + no database + zero ops, with a deployment package as small as 6KB. Infrequent uploads cost essentially nothing, and the built-in `*.fcapp.run` domain even saves you the ICP-filing hassle — bind a custom domain later if you want one."
 pubDate: 2026-10-14
 heroImage: ""
 categories:
@@ -11,29 +11,39 @@ tags:
   - Cloud Function FC Image Host
 author: jin
 ---
-![image](https://i.190808.xyz/m/26j13/0f38e9.png)
-
-> Source code: https://github.com/ezzty/oss-upload
+![image](https://i.190808.xyz/m/26j16/20b3f2.png?x-oss-process=style/w950)
 
 **Three things first:**
 
-1. Every `AccessKey`, password, domain, and bucket name in this article is a **placeholder** — replace them with your own before copying anything.
-2. The code is a single-file Node.js app (about 380 lines), with dependencies injected via an FC **Layer**, zero hardcoding in the business code, and all configuration read from environment variables.
-3. When you finish this article you'll have the full chain working: `login → get token → upload → receive Markdown image syntax`, plus an executable acceptance checklist before going live.
+1. This image host is simple in features, easy to configure, and secure enough. If it's not enough for you, hand the source code to an AI — adding or removing features is trivial.
+2. Every `AccessKey`, password, domain, and bucket name in this article is a **placeholder** — replace them with your own before copying anything.
+3. The code is a single-file Node.js app (about 380 lines), with dependencies injected via an FC **Layer**, zero hardcoding in the business code, and all configuration read from environment variables.
+
+> Source code: https://github.com/ezzty/oss-upload
 
 ---
 
 ### 1. Why build your own image host
 
-Every static blog needs a third-party image host. But which one won't abandon you? Hard to say. And with someone else's image host: you don't control the hotlink protection rules, the service dies and every image 404s, content moderation hits innocent files, free quotas hide traps.
+Every static blog basically needs an image host. Lots of people skimp by using someone else's free-forever image host — but which good Samaritan never shuts down? And with your data in someone else's hands, you have no initiative at all, so you're always on edge.
 
-After stepping on enough pits, I decided to build my own image host at near-zero cost. The main goal is saving money — unlimited uploads!
+After stepping on enough pits, I decided to build my own image host at rock-bottom cost. The main goals: save money, no capacity limits, and stay secure!
 
-- **Your data lives in your own account** — export or migrate it anytime
-- **Pay-as-you-go billing** — a personal image host's usage usually lands right at the edge of the free quota
-- **You set the security policy**: who can upload, how big, which directory, who can view — all under your control
+Most self-hosted image host setups need your own server — dozens of yuan a month plus patching yourself — or they only run in a local client, so you can't upload from a different computer. In the end I decided to build a serverless cloud image host: upload anywhere, anytime.
 
-The price is that you handle auth, brute-force protection, and type validation yourself — this article has already done that part for you.
+**Alibaba Cloud Function Compute FC + OSS + CDN**
+
+FC pay-as-you-go (near ¥0 at low traffic) + no database + zero ops, with a deployment package as small as 6KB. Infrequent uploads cost essentially nothing.
+
+OSS image storage is pay-as-you-go — tens of GB of images run you only a few yuan a month.
+
+Put a CDN in front and images load blindingly fast!
+
+A personal image host isn't a juicy attack target, but I still layered up the security: forced PoW against brute force, magic-number validation against spoofed files, triple size checks against payload flooding, a daily quota against abuse, and a 2-hour token against theft.
+
+This setup isn't without downsides: no multi-user support, no album management, no usage stats — you can't even delete an image without going into the OSS console.
+
+But it's tiny, it's cheap, and it's plenty for personal use.
 
 ---
 
@@ -116,21 +126,6 @@ Name the policy `ImageHostSingleBucket`. Then:
 - **No** `oss:CopyObject` — an image host doesn't need copy permissions; grant as little as possible
 - **Don't attach** `AliyunOSSFullAccess` — that would let your image-host AK read every data bucket you own
 
-#### 3.4 Secret storage discipline
-
-- ❌ Never write them into code, never commit them to Git
-- ✅ Keep them only in FC environment variables
-- Your repo's root `.gitignore` should at least contain:
-
-```
-.env
-.env.local
-*.key
-*.pem
-*.p12
-credentials.json
-```
-
 ---
 
 ### 4. Prepare the dependency layer (Layer)
@@ -208,9 +203,7 @@ zip code.zip index.js package.json
 
 #### 5.3 Environment variables (8 required — missing any one and it won't start)
 
-The code checks them one by one at startup, calls `process.exit(1)` on any missing value, the function returns 500, and the log shows `❌ FATAL: Missing required environment variable: X`.
-
-**The 8 required** (these are exactly the entries in `requiredEnvVars`):
+The function's environment variables have 8 required entries — configure them as shown in the image.
 
 - **`AUTH_USER`** `admin` — login username
 - **`AUTH_PASS`** `<set a strong password>` — login password; use a random long string
@@ -226,15 +219,6 @@ The code checks them one by one at startup, calls `process.exit(1)` on any missi
 - **`ALLOWED_ORIGINS`** `example.com,myblog.net` — allowed cross-origin sources, comma-separated. The function still starts without it; it is **only consulted when code-level CORS is enabled** (by default the platform just echoes back the `Origin`, so `isValidOrigin` is never called). If you do enable code-level CORS you must set it, otherwise the fallback value `example.com` will block every browser upload.
 
 ![image](https://i.190808.xyz/m/26j13/f09581.png)
-
-Generate random values:
-
-```bash
-openssl rand -base64 32   # JWT_SECRET
-openssl rand -base64 24   # AUTH_PASS
-```
-
-> `CDN_DOMAIN` must start with `http://` or `https://` — the code validates this specifically; forgetting the scheme aborts startup.
 
 #### 5.4 Bind a custom domain
 
@@ -267,21 +251,9 @@ There's a limit on each side — **the smaller one wins**. Change only the front
 
 That's the complete flow for getting a self-hosted image host running. **Why the code is written this way, the implementation details of each layer of protection, and the full acceptance checklist** are all in the source repo's README — refer to it when you need it:
 
-**https://github.com/ezzty/oss-upload** → "🧩 Core implementation (code level)" and "🧪 Pre-launch acceptance" in `README.md`
+**https://github.com/ezzty/oss-upload** → "Core implementation (code level)" and "Pre-launch acceptance" in `README.md`
 
-There you'll find what this article didn't expand on:
-
-- **Token structure and four security points** (HMAC signing, constant-time comparison, replay-protection boundaries)
-- **Magic-number detection reference table** (file header bytes for JPEG / PNG / GIF / WebP / BMP)
-- **Triple size validation**, the 4KB login body cap, and why IP brute-force protection must use a `Map` (tested prototype pollution via `X-Forwarded-For: __proto__`)
-- **FC event format compatibility and body decoding** (including two big pitfalls: lazy decoding, and undecoded binary must not be decoded as UTF-8)
-- **Frontend send methods** (iOS Safari drops the body of `xhr.send(File)` — use an ArrayBuffer instead)
-- **HTTP triggers and the three CORS approaches** (including one clarification: the FC console has no "allow cross-origin" checkbox at all)
-- **OSS image processing** (measured 1.89 MB → 81 KB, a 96% saving)
-- **Full pre-launch acceptance checklist** (probe commands + OSS verification script + security checklist)
-- **Common pitfalls quick-reference** (symptom → cause → fix; tricky cases like iOS dropping bodies and magic-number misjudgment are in there too)
-
-> The blog post just wants to explain "why self-host, how to get it running, what to watch out for". When you actually deploy, the README is the complete technical documentation.
+The blog post just wants to explain "why self-host, how to get it running, what to watch out for". When you actually deploy, the README is the complete technical documentation.
 
 ---
 
@@ -294,7 +266,7 @@ Pay-as-you-go, three parts:
 | **FC compute** | Compute CU (vCPU + memory × duration) + invocation count | Free quota exists; a personal image host usually sits near it |
 | **OSS storage** | ¥/GB/month | Standard storage is about **¥0.09–0.12/GB/month** |
 | **OSS requests** | Per request | Negligible |
-| **Traffic** | ¥/GB | See below |
+| **CDN traffic** | ¥/GB | See below |
 
 **Traffic is the bulk of the bill, and the easiest to optimize:**
 
