@@ -11,7 +11,7 @@ tags:
   - Cloud Function FC Image Host
 author: jin
 ---
-![image](https://i.190808.xyz/m/26j16/20b3f2.png?x-oss-process=style/w950)
+![image](https://i.190808.xyz/m/26j16/869bc3.jpg)
 
 **Three things first:**
 
